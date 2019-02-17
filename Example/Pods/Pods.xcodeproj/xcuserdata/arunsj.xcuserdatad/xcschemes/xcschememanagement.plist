@@ -4,17 +4,17 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>MyFrameSwiftPublic.xcscheme</key>
+		<key>Pods-SJFrameSwift_Example.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-MyFrameSwiftPublic_Example.xcscheme</key>
+		<key>Pods-SJFrameSwift_Tests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-MyFrameSwiftPublic_Tests.xcscheme</key>
+		<key>SJFrameSwift.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>

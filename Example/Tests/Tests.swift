@@ -1,5 +1,5 @@
 import XCTest
-import MyFrameSwiftPublic
+import SJFrameSwift
 
 class Tests: XCTestCase {
     

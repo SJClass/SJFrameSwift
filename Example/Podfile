@@ -1,9 +1,9 @@
 use_frameworks!
 
-target 'MyFrameSwiftPublic_Example' do
-  pod 'MyFrameSwiftPublic', :path => '../'
+target 'SJFrameSwift_Example' do
+  pod 'SJFrameSwift', :path => '../'
 
-  target 'MyFrameSwiftPublic_Tests' do
+  target 'SJFrameSwift_Tests' do
     inherit! :search_paths
 
     
