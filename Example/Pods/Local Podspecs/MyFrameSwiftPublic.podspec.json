@@ -1,0 +1,22 @@
+{
+  "name": "MyFrameSwiftPublic",
+  "version": "0.1.0",
+  "summary": "A short description of MyFrameSwiftPublic.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/arun.keezhattingal@gmail.com/MyFrameSwiftPublic",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "arun.keezhattingal@gmail.com": "arun.keezhattingal@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/arun.keezhattingal@gmail.com/MyFrameSwiftPublic.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "MyFrameSwiftPublic/Classes/**/*"
+}

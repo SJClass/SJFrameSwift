@@ -1,0 +1,6 @@
+framework module Pods_MyFrameSwiftPublic_Tests {
+  umbrella header "Pods-MyFrameSwiftPublic_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

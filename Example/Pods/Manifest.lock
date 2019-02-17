@@ -1,0 +1,16 @@
+PODS:
+  - MyFrameSwiftPublic (0.1.0)
+
+DEPENDENCIES:
+  - MyFrameSwiftPublic (from `../`)
+
+EXTERNAL SOURCES:
+  MyFrameSwiftPublic:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  MyFrameSwiftPublic: 41df16bbafd166c1f1fd0d04f86e85c6c5084f73
+
+PODFILE CHECKSUM: 71c854b07faa122b1c9e26f94ac927153844968c
+
+COCOAPODS: 1.6.0

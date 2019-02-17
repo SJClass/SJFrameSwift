@@ -1,0 +1,6 @@
+framework module MyFrameSwiftPublic {
+  umbrella header "MyFrameSwiftPublic-umbrella.h"
+
+  export *
+  module * { export * }
+}

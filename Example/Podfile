@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'MyFrameSwiftPublic_Example' do
+  pod 'MyFrameSwiftPublic', :path => '../'
+
+  target 'MyFrameSwiftPublic_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
