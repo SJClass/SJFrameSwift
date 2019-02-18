@@ -9,12 +9,15 @@
 /* Begin PBXBuildFile section */
 		0AEC3427AB62BA99D8912594252BCBEB /* SJFrameSwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 004C5B7A6446FB2E928D4D5C9962ACAB /* SJFrameSwift-dummy.m */; };
 		20BCEE265CF05016F08461F5DF1651A0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
-		515FB62AAD79F23F21FF23A022D8834E /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C761D5FC540219ACD99845BAAAA7A5 /* ReplaceMe.swift */; };
+		515FB62AAD79F23F21FF23A022D8834E /* SJView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C761D5FC540219ACD99845BAAAA7A5 /* SJView.swift */; };
 		70A412B0317CB55C17696027909CFD25 /* Pods-SJFrameSwift_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 838341D8A2A9C218378A2EF273E2DA4F /* Pods-SJFrameSwift_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7480CCAE611230F6F4DEA67B42D2754D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
 		7A8CF7343B2751346982D27864361ACF /* Pods-SJFrameSwift_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E91C9A369DE6D3C8B269CAAAD774257 /* Pods-SJFrameSwift_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		833FDDDAE0FB28A639922800C369E994 /* Pods-SJFrameSwift_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D8CF400587AFEC6C03780B5C334D21 /* Pods-SJFrameSwift_Tests-dummy.m */; };
 		A387054EFDC16D7CCCBF563715F2652A /* SJFrameSwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 68131F800DC47A048AFD088B0FD47DF3 /* SJFrameSwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C70C18D8221A767500E9DF8D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70C18D7221A767500E9DF8D /* Constants.swift */; };
+		C70C18D9221A767500E9DF8D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70C18D7221A767500E9DF8D /* Constants.swift */; };
+		C70C18DA221A767500E9DF8D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70C18D7221A767500E9DF8D /* Constants.swift */; };
 		DB1F80EDBC76249E59EAE1C5C4851E18 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
 		E25D9E45E54BCA19CD7361528E589B68 /* Pods-SJFrameSwift_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6957393255D4929E29C65F26303863E7 /* Pods-SJFrameSwift_Example-dummy.m */; };
 /* End PBXBuildFile section */
@@ -38,7 +41,7 @@
 
 /* Begin PBXFileReference section */
 		004C5B7A6446FB2E928D4D5C9962ACAB /* SJFrameSwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SJFrameSwift-dummy.m"; sourceTree = "<group>"; };
-		0D4982E544B8E7806098ED05B23E2E33 /* Pods_SJFrameSwift_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SJFrameSwift_Example.framework; path = "Pods-SJFrameSwift_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0D4982E544B8E7806098ED05B23E2E33 /* Pods_SJFrameSwift_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SJFrameSwift_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E91C9A369DE6D3C8B269CAAAD774257 /* Pods-SJFrameSwift_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SJFrameSwift_Example-umbrella.h"; sourceTree = "<group>"; };
 		2A9A093DED283843E7ED2D6ED024F22A /* SJFrameSwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SJFrameSwift.modulemap; sourceTree = "<group>"; };
 		3489FA298A5B331D9F7CA89330AD403D /* Pods-SJFrameSwift_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SJFrameSwift_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
@@ -46,26 +49,27 @@
 		3D996A40F54B7C77BC7415F6777EC397 /* SJFrameSwift-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SJFrameSwift-Info.plist"; sourceTree = "<group>"; };
 		419E590345006882379147BEF2D5AA6C /* Pods-SJFrameSwift_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SJFrameSwift_Example.release.xcconfig"; sourceTree = "<group>"; };
 		4462E40521EE25A25FC785B93C0BEF7B /* Pods-SJFrameSwift_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SJFrameSwift_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		55C761D5FC540219ACD99845BAAAA7A5 /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReplaceMe.swift; path = SJFrameSwift/Classes/ReplaceMe.swift; sourceTree = "<group>"; };
+		55C761D5FC540219ACD99845BAAAA7A5 /* SJView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SJView.swift; path = SJFrameSwift/Classes/SJView.swift; sourceTree = "<group>"; };
 		68131F800DC47A048AFD088B0FD47DF3 /* SJFrameSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SJFrameSwift-umbrella.h"; sourceTree = "<group>"; };
 		6957393255D4929E29C65F26303863E7 /* Pods-SJFrameSwift_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SJFrameSwift_Example-dummy.m"; sourceTree = "<group>"; };
 		6B4FC04658E4C42D2CE96921DEC0C802 /* Pods-SJFrameSwift_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SJFrameSwift_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		75A52BEA8F481D278CD6E21CBCAF8445 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		75A52BEA8F481D278CD6E21CBCAF8445 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		838341D8A2A9C218378A2EF273E2DA4F /* Pods-SJFrameSwift_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SJFrameSwift_Tests-umbrella.h"; sourceTree = "<group>"; };
-		87B00D5DB67B9DC0BD6D95FB0927A698 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		87B00D5DB67B9DC0BD6D95FB0927A698 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		94D8CF400587AFEC6C03780B5C334D21 /* Pods-SJFrameSwift_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SJFrameSwift_Tests-dummy.m"; sourceTree = "<group>"; };
-		952A9209E6CD9CAD2B8892E7C5548543 /* SJFrameSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SJFrameSwift.framework; path = SJFrameSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		952A9209E6CD9CAD2B8892E7C5548543 /* SJFrameSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SJFrameSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		AAA2F3F9867456DEB41C83E9B89A2741 /* Pods-SJFrameSwift_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SJFrameSwift_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		AED3A16EDB0441355AECE409D73D05FC /* Pods_SJFrameSwift_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SJFrameSwift_Tests.framework; path = "Pods-SJFrameSwift_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AED3A16EDB0441355AECE409D73D05FC /* Pods_SJFrameSwift_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SJFrameSwift_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B87B66015693409F0FC9B81621DAB46D /* Pods-SJFrameSwift_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SJFrameSwift_Tests.modulemap"; sourceTree = "<group>"; };
 		BCA338DE90C0795355651727242B22AE /* Pods-SJFrameSwift_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SJFrameSwift_Example-frameworks.sh"; sourceTree = "<group>"; };
 		BE8DCD14E02C1615811B9383A4BBF95F /* Pods-SJFrameSwift_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SJFrameSwift_Example.modulemap"; sourceTree = "<group>"; };
 		C0AF9791415B17060D3CC510AB7AB176 /* Pods-SJFrameSwift_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SJFrameSwift_Tests-Info.plist"; sourceTree = "<group>"; };
+		C70C18D7221A767500E9DF8D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		D11409DB61908BB80468FE7E24398051 /* Pods-SJFrameSwift_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SJFrameSwift_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		D3B7FAC6F2E1DDB8A8741203E7B09BE1 /* Pods-SJFrameSwift_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SJFrameSwift_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		D3EDCA3928D69AB14BA9881A12B03F4E /* SJFrameSwift.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = SJFrameSwift.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		D3EDCA3928D69AB14BA9881A12B03F4E /* SJFrameSwift.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = SJFrameSwift.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		E48D9C3E82F6895077302E18BDBE31B7 /* SJFrameSwift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SJFrameSwift.xcconfig; sourceTree = "<group>"; };
 		E8391C7B94B4A21484C092863E932BEF /* Pods-SJFrameSwift_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SJFrameSwift_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		F443140E3D02E2582CF534F29624F0BE /* SJFrameSwift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SJFrameSwift-prefix.pch"; sourceTree = "<group>"; };
@@ -147,7 +151,8 @@
 		7BF4E963DCD1CADF32144C18DAB29861 /* SJFrameSwift */ = {
 			isa = PBXGroup;
 			children = (
-				55C761D5FC540219ACD99845BAAAA7A5 /* ReplaceMe.swift */,
+				55C761D5FC540219ACD99845BAAAA7A5 /* SJView.swift */,
+				C70C18D7221A767500E9DF8D /* Constants.swift */,
 				3503D6C77808709D76096D38AE2F5D9D /* Pod */,
 				966E83371896D8C9865E2453D26AFA00 /* Support Files */,
 			);
@@ -315,6 +320,14 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0930;
 				LastUpgradeCheck = 0930;
+				TargetAttributes = {
+					3A772F68914FEBC6771C71A5BAF6A255 = {
+						LastSwiftMigration = 1010;
+					};
+					5198A2CCE245FEB5B6E6FEF25FDDE737 = {
+						LastSwiftMigration = 1010;
+					};
+				};
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -365,6 +378,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				833FDDDAE0FB28A639922800C369E994 /* Pods-SJFrameSwift_Tests-dummy.m in Sources */,
+				C70C18D9221A767500E9DF8D /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -373,6 +387,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E25D9E45E54BCA19CD7361528E589B68 /* Pods-SJFrameSwift_Example-dummy.m in Sources */,
+				C70C18D8221A767500E9DF8D /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -380,8 +395,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				515FB62AAD79F23F21FF23A022D8834E /* ReplaceMe.swift in Sources */,
+				515FB62AAD79F23F21FF23A022D8834E /* SJView.swift in Sources */,
 				0AEC3427AB62BA99D8912594252BCBEB /* SJFrameSwift-dummy.m in Sources */,
+				C70C18DA221A767500E9DF8D /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -471,6 +487,7 @@
 			baseConfigurationReference = E8391C7B94B4A21484C092863E932BEF /* Pods-SJFrameSwift_Tests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -493,6 +510,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -505,6 +523,7 @@
 			baseConfigurationReference = D11409DB61908BB80468FE7E24398051 /* Pods-SJFrameSwift_Example.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -527,6 +546,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -602,6 +623,7 @@
 			baseConfigurationReference = 419E590345006882379147BEF2D5AA6C /* Pods-SJFrameSwift_Example.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -624,6 +646,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -684,8 +707,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 4.2;
 				SYMROOT = "${SRCROOT}/../build";
 			};
@@ -696,6 +718,7 @@
 			baseConfigurationReference = D3B7FAC6F2E1DDB8A8741203E7B09BE1 /* Pods-SJFrameSwift_Tests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -718,6 +741,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
