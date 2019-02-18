@@ -425,21 +425,21 @@ extension UILabel {
 }
 
 public class SJStringStyle {
-    static func Font(font:UIFont)->[NSAttributedString.Key:Any]{
+   public static func Font(font:UIFont)->[NSAttributedString.Key:Any]{
         let strokeTextAttributes: [NSAttributedString.Key: Any] = [
             .font : font
         ]
         return strokeTextAttributes;
     }
     
-    static func Color(color:UIColor)->[NSAttributedString.Key:Any]{
+   public static func Color(color:UIColor)->[NSAttributedString.Key:Any]{
         let strokeTextAttributes: [NSAttributedString.Key: Any] = [
             .foregroundColor : color
         ]
         return strokeTextAttributes;
     }
     
-    static func LineSpace(space:Float)->[NSAttributedString.Key:Any]{
+   public static func LineSpace(space:Float)->[NSAttributedString.Key:Any]{
         let objParagraphStyle:NSMutableParagraphStyle = NSMutableParagraphStyle();
         objParagraphStyle.alignment = NSTextAlignment.left;
         objParagraphStyle.lineBreakMode = NSLineBreakMode.byWordWrapping;
@@ -452,7 +452,7 @@ public class SJStringStyle {
         return strokeTextAttributes;
     }
     
-    static func LineSpace(space:Float,Alignment:NSTextAlignment)->[NSAttributedString.Key:Any]{
+   public static func LineSpace(space:Float,Alignment:NSTextAlignment)->[NSAttributedString.Key:Any]{
         let objParagraphStyle:NSMutableParagraphStyle = NSMutableParagraphStyle();
         objParagraphStyle.alignment = Alignment;
         objParagraphStyle.lineBreakMode = NSLineBreakMode.byWordWrapping;
@@ -465,7 +465,7 @@ public class SJStringStyle {
         return strokeTextAttributes;
     }
     
-    static func SuperScript(value:NSNumber) -> [NSAttributedString.Key:Any]{
+    public static func SuperScript(value:NSNumber) -> [NSAttributedString.Key:Any]{
         let strokeTextAttributes: [NSAttributedString.Key: Any] = [
             ((kCTSuperscriptAttributeName as CFString) as NSAttributedString.Key ) : value
         ]
