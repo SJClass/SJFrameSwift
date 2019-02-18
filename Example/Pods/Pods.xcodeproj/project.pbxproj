@@ -15,9 +15,6 @@
 		7A8CF7343B2751346982D27864361ACF /* Pods-SJFrameSwift_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E91C9A369DE6D3C8B269CAAAD774257 /* Pods-SJFrameSwift_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		833FDDDAE0FB28A639922800C369E994 /* Pods-SJFrameSwift_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D8CF400587AFEC6C03780B5C334D21 /* Pods-SJFrameSwift_Tests-dummy.m */; };
 		A387054EFDC16D7CCCBF563715F2652A /* SJFrameSwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 68131F800DC47A048AFD088B0FD47DF3 /* SJFrameSwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C70C18D8221A767500E9DF8D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70C18D7221A767500E9DF8D /* Constants.swift */; };
-		C70C18D9221A767500E9DF8D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70C18D7221A767500E9DF8D /* Constants.swift */; };
-		C70C18DA221A767500E9DF8D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70C18D7221A767500E9DF8D /* Constants.swift */; };
 		C70C1917221A7EB400E9DF8D /* SJLanguageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70C1911221A7EB300E9DF8D /* SJLanguageManager.swift */; };
 		C70C1918221A7EB400E9DF8D /* SJLanguageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70C1911221A7EB300E9DF8D /* SJLanguageManager.swift */; };
 		C70C1919221A7EB400E9DF8D /* SJLanguageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70C1911221A7EB300E9DF8D /* SJLanguageManager.swift */; };
@@ -36,6 +33,9 @@
 		C70C1926221A7EB400E9DF8D /* SlideInPresentationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70C1916221A7EB400E9DF8D /* SlideInPresentationManager.swift */; };
 		C70C1927221A7EB400E9DF8D /* SlideInPresentationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70C1916221A7EB400E9DF8D /* SlideInPresentationManager.swift */; };
 		C70C1928221A7EB400E9DF8D /* SlideInPresentationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70C1916221A7EB400E9DF8D /* SlideInPresentationManager.swift */; };
+		C70C192A221A80AA00E9DF8D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70C1929221A80AA00E9DF8D /* Constants.swift */; };
+		C70C192B221A80AA00E9DF8D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70C1929221A80AA00E9DF8D /* Constants.swift */; };
+		C70C192C221A80AA00E9DF8D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70C1929221A80AA00E9DF8D /* Constants.swift */; };
 		DB1F80EDBC76249E59EAE1C5C4851E18 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
 		E25D9E45E54BCA19CD7361528E589B68 /* Pods-SJFrameSwift_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6957393255D4929E29C65F26303863E7 /* Pods-SJFrameSwift_Example-dummy.m */; };
 /* End PBXBuildFile section */
@@ -83,13 +83,13 @@
 		BCA338DE90C0795355651727242B22AE /* Pods-SJFrameSwift_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SJFrameSwift_Example-frameworks.sh"; sourceTree = "<group>"; };
 		BE8DCD14E02C1615811B9383A4BBF95F /* Pods-SJFrameSwift_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SJFrameSwift_Example.modulemap"; sourceTree = "<group>"; };
 		C0AF9791415B17060D3CC510AB7AB176 /* Pods-SJFrameSwift_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SJFrameSwift_Tests-Info.plist"; sourceTree = "<group>"; };
-		C70C18D7221A767500E9DF8D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C70C1911221A7EB300E9DF8D /* SJLanguageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SJLanguageManager.swift; path = SJFrameSwift/Classes/SJLanguageManager.swift; sourceTree = "<group>"; };
 		C70C1912221A7EB300E9DF8D /* SlideInPresentationAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SlideInPresentationAnimator.swift; path = SJFrameSwift/Classes/SlideInPresentationAnimator.swift; sourceTree = "<group>"; };
 		C70C1913221A7EB300E9DF8D /* SJAPILoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SJAPILoader.swift; path = SJFrameSwift/Classes/SJAPILoader.swift; sourceTree = "<group>"; };
 		C70C1914221A7EB300E9DF8D /* SJDataCatch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SJDataCatch.swift; path = SJFrameSwift/Classes/SJDataCatch.swift; sourceTree = "<group>"; };
 		C70C1915221A7EB400E9DF8D /* SlideInPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SlideInPresentationController.swift; path = SJFrameSwift/Classes/SlideInPresentationController.swift; sourceTree = "<group>"; };
 		C70C1916221A7EB400E9DF8D /* SlideInPresentationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SlideInPresentationManager.swift; path = SJFrameSwift/Classes/SlideInPresentationManager.swift; sourceTree = "<group>"; };
+		C70C1929221A80AA00E9DF8D /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = SJFrameSwift/Classes/Constants.swift; sourceTree = "<group>"; };
 		CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		D11409DB61908BB80468FE7E24398051 /* Pods-SJFrameSwift_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SJFrameSwift_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		D3B7FAC6F2E1DDB8A8741203E7B09BE1 /* Pods-SJFrameSwift_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SJFrameSwift_Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -175,6 +175,7 @@
 		7BF4E963DCD1CADF32144C18DAB29861 /* SJFrameSwift */ = {
 			isa = PBXGroup;
 			children = (
+				C70C1929221A80AA00E9DF8D /* Constants.swift */,
 				C70C1913221A7EB300E9DF8D /* SJAPILoader.swift */,
 				C70C1914221A7EB300E9DF8D /* SJDataCatch.swift */,
 				C70C1911221A7EB300E9DF8D /* SJLanguageManager.swift */,
@@ -182,7 +183,6 @@
 				C70C1915221A7EB400E9DF8D /* SlideInPresentationController.swift */,
 				C70C1916221A7EB400E9DF8D /* SlideInPresentationManager.swift */,
 				55C761D5FC540219ACD99845BAAAA7A5 /* SJView.swift */,
-				C70C18D7221A767500E9DF8D /* Constants.swift */,
 				3503D6C77808709D76096D38AE2F5D9D /* Pod */,
 				966E83371896D8C9865E2453D26AFA00 /* Support Files */,
 			);
@@ -414,7 +414,7 @@
 				C70C1927221A7EB400E9DF8D /* SlideInPresentationManager.swift in Sources */,
 				C70C191B221A7EB400E9DF8D /* SlideInPresentationAnimator.swift in Sources */,
 				833FDDDAE0FB28A639922800C369E994 /* Pods-SJFrameSwift_Tests-dummy.m in Sources */,
-				C70C18D9221A767500E9DF8D /* Constants.swift in Sources */,
+				C70C192B221A80AA00E9DF8D /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -429,7 +429,7 @@
 				C70C1926221A7EB400E9DF8D /* SlideInPresentationManager.swift in Sources */,
 				C70C191A221A7EB400E9DF8D /* SlideInPresentationAnimator.swift in Sources */,
 				E25D9E45E54BCA19CD7361528E589B68 /* Pods-SJFrameSwift_Example-dummy.m in Sources */,
-				C70C18D8221A767500E9DF8D /* Constants.swift in Sources */,
+				C70C192A221A80AA00E9DF8D /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -445,7 +445,7 @@
 				C70C1919221A7EB400E9DF8D /* SJLanguageManager.swift in Sources */,
 				C70C1922221A7EB400E9DF8D /* SJDataCatch.swift in Sources */,
 				C70C1925221A7EB400E9DF8D /* SlideInPresentationController.swift in Sources */,
-				C70C18DA221A767500E9DF8D /* Constants.swift in Sources */,
+				C70C192C221A80AA00E9DF8D /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
