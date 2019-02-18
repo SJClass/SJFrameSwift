@@ -8,6 +8,7 @@
 
 import UIKit
 
+@IBDesignable
 open class SJView: UIView {
     
     var isHaveCircle:Bool = false;
@@ -60,7 +61,7 @@ open class SJView: UIView {
 }
 
 
-
+@IBDesignable
 class SJViewCircle: SJView {
     
     
