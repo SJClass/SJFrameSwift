@@ -36,6 +36,9 @@
 		C70C192A221A80AA00E9DF8D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70C1929221A80AA00E9DF8D /* Constants.swift */; };
 		C70C192B221A80AA00E9DF8D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70C1929221A80AA00E9DF8D /* Constants.swift */; };
 		C70C192C221A80AA00E9DF8D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70C1929221A80AA00E9DF8D /* Constants.swift */; };
+		C7241960221ABF0E0039276F /* SJNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C724195F221ABF0D0039276F /* SJNavigationController.swift */; };
+		C7241961221ABF0E0039276F /* SJNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C724195F221ABF0D0039276F /* SJNavigationController.swift */; };
+		C7241962221ABF0E0039276F /* SJNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C724195F221ABF0D0039276F /* SJNavigationController.swift */; };
 		DB1F80EDBC76249E59EAE1C5C4851E18 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
 		E25D9E45E54BCA19CD7361528E589B68 /* Pods-SJFrameSwift_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6957393255D4929E29C65F26303863E7 /* Pods-SJFrameSwift_Example-dummy.m */; };
 /* End PBXBuildFile section */
@@ -90,6 +93,7 @@
 		C70C1915221A7EB400E9DF8D /* SlideInPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SlideInPresentationController.swift; path = SJFrameSwift/Classes/SlideInPresentationController.swift; sourceTree = "<group>"; };
 		C70C1916221A7EB400E9DF8D /* SlideInPresentationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SlideInPresentationManager.swift; path = SJFrameSwift/Classes/SlideInPresentationManager.swift; sourceTree = "<group>"; };
 		C70C1929221A80AA00E9DF8D /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = SJFrameSwift/Classes/Constants.swift; sourceTree = "<group>"; };
+		C724195F221ABF0D0039276F /* SJNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SJNavigationController.swift; path = SJFrameSwift/Classes/SJNavigationController.swift; sourceTree = "<group>"; };
 		CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		D11409DB61908BB80468FE7E24398051 /* Pods-SJFrameSwift_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SJFrameSwift_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		D3B7FAC6F2E1DDB8A8741203E7B09BE1 /* Pods-SJFrameSwift_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SJFrameSwift_Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -175,6 +179,7 @@
 		7BF4E963DCD1CADF32144C18DAB29861 /* SJFrameSwift */ = {
 			isa = PBXGroup;
 			children = (
+				C724195F221ABF0D0039276F /* SJNavigationController.swift */,
 				C70C1929221A80AA00E9DF8D /* Constants.swift */,
 				C70C1913221A7EB300E9DF8D /* SJAPILoader.swift */,
 				C70C1914221A7EB300E9DF8D /* SJDataCatch.swift */,
@@ -407,6 +412,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7241961221ABF0E0039276F /* SJNavigationController.swift in Sources */,
 				C70C191E221A7EB400E9DF8D /* SJAPILoader.swift in Sources */,
 				C70C1918221A7EB400E9DF8D /* SJLanguageManager.swift in Sources */,
 				C70C1921221A7EB400E9DF8D /* SJDataCatch.swift in Sources */,
@@ -422,6 +428,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7241960221ABF0E0039276F /* SJNavigationController.swift in Sources */,
 				C70C191D221A7EB400E9DF8D /* SJAPILoader.swift in Sources */,
 				C70C1917221A7EB400E9DF8D /* SJLanguageManager.swift in Sources */,
 				C70C1920221A7EB400E9DF8D /* SJDataCatch.swift in Sources */,
@@ -445,6 +452,7 @@
 				C70C1919221A7EB400E9DF8D /* SJLanguageManager.swift in Sources */,
 				C70C1922221A7EB400E9DF8D /* SJDataCatch.swift in Sources */,
 				C70C1925221A7EB400E9DF8D /* SlideInPresentationController.swift in Sources */,
+				C7241962221ABF0E0039276F /* SJNavigationController.swift in Sources */,
 				C70C192C221A80AA00E9DF8D /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
