@@ -509,7 +509,7 @@ open class SJViewController: UIViewController {
     lazy var slideInTransitioningDelegate = SlideInPresentationManager();
     var isKeyboardNotificationRegister:Bool = false;
     
-    override func viewDidDisappear(_ animated: Bool) {
+    override open func viewDidDisappear(_ animated: Bool) {
         if(isKeyboardNotificationRegister){
             self.removeKeyboardNotifications();
         }
