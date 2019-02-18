@@ -315,15 +315,15 @@ extension UIColor {
 
 
 extension NSMutableAttributedString{
-    func addString(str:String){
+    public func addString(str:String){
         self.append(NSAttributedString(string: str))
     }
     
-    func addStringStyle(Style:[NSAttributedString.Key:Any]){
+    public func addStringStyle(Style:[NSAttributedString.Key:Any]){
         self.addAttributes(Style, range: NSRange(location: 0, length: self.length-1));
     }
     
-    func addStringWithStyle(str:String,properties:[[NSAttributedString.Key:Any]]){
+    public func addStringWithStyle(str:String,properties:[[NSAttributedString.Key:Any]]){
         
         //            let strokeTextAttributes: [NSAttributedStringKey: Any] = [
         //                .strokeColor : UIColor.black,
@@ -342,7 +342,7 @@ extension NSMutableAttributedString{
         self.append(NSAttributedString(string: str, attributes: strokeTextAttributes));
     }
     
-    func addImage(image:UIImage){
+    public func addImage(image:UIImage){
         if let imageObj = image as UIImage? {
             let imageAttachment : NSTextAttachment = NSTextAttachment()
             imageAttachment.image = imageObj;
@@ -351,7 +351,7 @@ extension NSMutableAttributedString{
         }
     }
     
-    func addImage(image:UIImage,point:CGPoint){
+    public func addImage(image:UIImage,point:CGPoint){
         
         if let imageObj = image as UIImage? {
             let imageAttachment : NSTextAttachment = NSTextAttachment()
@@ -363,21 +363,21 @@ extension NSMutableAttributedString{
 }
 
 extension UILabel {
-    func addString(str:String){
+    public func addString(str:String){
         if let attribText = self.attributedText as? NSMutableAttributedString{
             attribText.addString(str: str);//.append(NSAttributedString(string: str))
             self.attributedText = attribText;
         }
     }
     
-    func addStringStyle(Style:[NSAttributedString.Key:Any]){
+    public func addStringStyle(Style:[NSAttributedString.Key:Any]){
         if let attribText = self.attributedText as? NSMutableAttributedString{
             attribText.addStringStyle(Style: Style)//.addAttributes(Style, range: NSRange(location: 0, length: attribText.length-1));
             self.attributedText = attribText;
         }
     }
     
-    func addStringWithStyle(str:String,properties:[[NSAttributedString.Key:Any]]){
+    public func addStringWithStyle(str:String,properties:[[NSAttributedString.Key:Any]]){
         if let attribText = self.attributedText as? NSMutableAttributedString{
             /*
              var strokeTextAttributes = [NSAttributedStringKey: Any]();
@@ -393,7 +393,7 @@ extension UILabel {
         }
     }
     
-    func addImage(image:UIImage){
+    public func addImage(image:UIImage){
         if let attribText = self.attributedText as? NSMutableAttributedString{
             if let imageObj = image as UIImage? {
                 /*
@@ -408,7 +408,7 @@ extension UILabel {
         }
     }
     
-    func addImage(image:UIImage,point:CGPoint){
+    public func addImage(image:UIImage,point:CGPoint){
         if let attribText = self.attributedText as? NSMutableAttributedString{
             if let imageObj = image as UIImage? {
                 /*
@@ -424,7 +424,7 @@ extension UILabel {
     }
 }
 
-class SJStringStyle {
+public class SJStringStyle {
     static func Font(font:UIFont)->[NSAttributedString.Key:Any]{
         let strokeTextAttributes: [NSAttributedString.Key: Any] = [
             .font : font
