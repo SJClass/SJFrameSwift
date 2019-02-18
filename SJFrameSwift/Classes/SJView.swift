@@ -503,7 +503,7 @@ class SJTabBar:UITabBar{
 }
 
 
-class SJViewController: UIViewController {
+open class SJViewController: UIViewController {
     
     private var viewLoader:UIView?;
     lazy var slideInTransitioningDelegate = SlideInPresentationManager();
