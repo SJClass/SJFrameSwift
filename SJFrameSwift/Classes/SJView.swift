@@ -522,7 +522,7 @@ open class SJViewController: UIViewController {
         self.modalPresentationStyle = .custom
     }
     
-    func showMessage(message :String) -> Void {
+    public func showMessage(message :String) -> Void {
         let alert:UIAlertController = UIAlertController(title: "Alert", message: message, preferredStyle: UIAlertController.Style.alert);
         alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.cancel, handler: { (alertAction) in
             //self.dismiss(animated: true, completion: nil);
@@ -534,14 +534,14 @@ open class SJViewController: UIViewController {
     
     
     
-    func registerForKeyboardNotifications() -> Void {
+    public func registerForKeyboardNotifications() -> Void {
         NotificationCenter.default.addObserver(self, selector: #selector(sjkeyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(sjkeyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(sjkeyboardWillChange), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
         isKeyboardNotificationRegister = true;
     }
     
-    func removeKeyboardNotifications() -> Void {
+    public func removeKeyboardNotifications() -> Void {
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
@@ -577,7 +577,7 @@ open class SJViewController: UIViewController {
         //
     }
     
-    func showLoader() -> Void {
+    public func showLoader() -> Void {
         DispatchQueue.main.async {
             if let view = self.viewLoader{
                 view.frame = view.bounds;
@@ -588,7 +588,7 @@ open class SJViewController: UIViewController {
         }
     }
     
-    func hideLoader() -> Void {
+    public func hideLoader() -> Void {
         DispatchQueue.main.async {
             if let view = self.viewLoader{
                 UIView.animate(withDuration: 0.3, animations: {
