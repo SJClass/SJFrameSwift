@@ -18,24 +18,24 @@
 		C70C18D8221A767500E9DF8D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70C18D7221A767500E9DF8D /* Constants.swift */; };
 		C70C18D9221A767500E9DF8D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70C18D7221A767500E9DF8D /* Constants.swift */; };
 		C70C18DA221A767500E9DF8D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70C18D7221A767500E9DF8D /* Constants.swift */; };
-		C70C18FA221A79A700E9DF8D /* SJLanguageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70C18F9221A79A700E9DF8D /* SJLanguageManager.swift */; };
-		C70C18FB221A79A700E9DF8D /* SJLanguageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70C18F9221A79A700E9DF8D /* SJLanguageManager.swift */; };
-		C70C18FC221A79A700E9DF8D /* SJLanguageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70C18F9221A79A700E9DF8D /* SJLanguageManager.swift */; };
-		C70C18FE221A7A1100E9DF8D /* SJDataCatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70C18FD221A7A1100E9DF8D /* SJDataCatch.swift */; };
-		C70C18FF221A7A1100E9DF8D /* SJDataCatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70C18FD221A7A1100E9DF8D /* SJDataCatch.swift */; };
-		C70C1900221A7A1100E9DF8D /* SJDataCatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70C18FD221A7A1100E9DF8D /* SJDataCatch.swift */; };
-		C70C1904221A7A5300E9DF8D /* SlideInPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70C1901221A7A5200E9DF8D /* SlideInPresentationController.swift */; };
-		C70C1905221A7A5300E9DF8D /* SlideInPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70C1901221A7A5200E9DF8D /* SlideInPresentationController.swift */; };
-		C70C1906221A7A5300E9DF8D /* SlideInPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70C1901221A7A5200E9DF8D /* SlideInPresentationController.swift */; };
-		C70C1907221A7A5300E9DF8D /* SlideInPresentationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70C1902221A7A5200E9DF8D /* SlideInPresentationManager.swift */; };
-		C70C1908221A7A5300E9DF8D /* SlideInPresentationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70C1902221A7A5200E9DF8D /* SlideInPresentationManager.swift */; };
-		C70C1909221A7A5300E9DF8D /* SlideInPresentationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70C1902221A7A5200E9DF8D /* SlideInPresentationManager.swift */; };
-		C70C190A221A7A5300E9DF8D /* SlideInPresentationAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70C1903221A7A5300E9DF8D /* SlideInPresentationAnimator.swift */; };
-		C70C190B221A7A5300E9DF8D /* SlideInPresentationAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70C1903221A7A5300E9DF8D /* SlideInPresentationAnimator.swift */; };
-		C70C190C221A7A5300E9DF8D /* SlideInPresentationAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70C1903221A7A5300E9DF8D /* SlideInPresentationAnimator.swift */; };
-		C70C190E221A7A7800E9DF8D /* SJAPILoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70C190D221A7A7800E9DF8D /* SJAPILoader.swift */; };
-		C70C190F221A7A7800E9DF8D /* SJAPILoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70C190D221A7A7800E9DF8D /* SJAPILoader.swift */; };
-		C70C1910221A7A7800E9DF8D /* SJAPILoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70C190D221A7A7800E9DF8D /* SJAPILoader.swift */; };
+		C70C1917221A7EB400E9DF8D /* SJLanguageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70C1911221A7EB300E9DF8D /* SJLanguageManager.swift */; };
+		C70C1918221A7EB400E9DF8D /* SJLanguageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70C1911221A7EB300E9DF8D /* SJLanguageManager.swift */; };
+		C70C1919221A7EB400E9DF8D /* SJLanguageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70C1911221A7EB300E9DF8D /* SJLanguageManager.swift */; };
+		C70C191A221A7EB400E9DF8D /* SlideInPresentationAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70C1912221A7EB300E9DF8D /* SlideInPresentationAnimator.swift */; };
+		C70C191B221A7EB400E9DF8D /* SlideInPresentationAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70C1912221A7EB300E9DF8D /* SlideInPresentationAnimator.swift */; };
+		C70C191C221A7EB400E9DF8D /* SlideInPresentationAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70C1912221A7EB300E9DF8D /* SlideInPresentationAnimator.swift */; };
+		C70C191D221A7EB400E9DF8D /* SJAPILoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70C1913221A7EB300E9DF8D /* SJAPILoader.swift */; };
+		C70C191E221A7EB400E9DF8D /* SJAPILoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70C1913221A7EB300E9DF8D /* SJAPILoader.swift */; };
+		C70C191F221A7EB400E9DF8D /* SJAPILoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70C1913221A7EB300E9DF8D /* SJAPILoader.swift */; };
+		C70C1920221A7EB400E9DF8D /* SJDataCatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70C1914221A7EB300E9DF8D /* SJDataCatch.swift */; };
+		C70C1921221A7EB400E9DF8D /* SJDataCatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70C1914221A7EB300E9DF8D /* SJDataCatch.swift */; };
+		C70C1922221A7EB400E9DF8D /* SJDataCatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70C1914221A7EB300E9DF8D /* SJDataCatch.swift */; };
+		C70C1923221A7EB400E9DF8D /* SlideInPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70C1915221A7EB400E9DF8D /* SlideInPresentationController.swift */; };
+		C70C1924221A7EB400E9DF8D /* SlideInPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70C1915221A7EB400E9DF8D /* SlideInPresentationController.swift */; };
+		C70C1925221A7EB400E9DF8D /* SlideInPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70C1915221A7EB400E9DF8D /* SlideInPresentationController.swift */; };
+		C70C1926221A7EB400E9DF8D /* SlideInPresentationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70C1916221A7EB400E9DF8D /* SlideInPresentationManager.swift */; };
+		C70C1927221A7EB400E9DF8D /* SlideInPresentationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70C1916221A7EB400E9DF8D /* SlideInPresentationManager.swift */; };
+		C70C1928221A7EB400E9DF8D /* SlideInPresentationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70C1916221A7EB400E9DF8D /* SlideInPresentationManager.swift */; };
 		DB1F80EDBC76249E59EAE1C5C4851E18 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
 		E25D9E45E54BCA19CD7361528E589B68 /* Pods-SJFrameSwift_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6957393255D4929E29C65F26303863E7 /* Pods-SJFrameSwift_Example-dummy.m */; };
 /* End PBXBuildFile section */
@@ -84,12 +84,12 @@
 		BE8DCD14E02C1615811B9383A4BBF95F /* Pods-SJFrameSwift_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SJFrameSwift_Example.modulemap"; sourceTree = "<group>"; };
 		C0AF9791415B17060D3CC510AB7AB176 /* Pods-SJFrameSwift_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SJFrameSwift_Tests-Info.plist"; sourceTree = "<group>"; };
 		C70C18D7221A767500E9DF8D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		C70C18F9221A79A700E9DF8D /* SJLanguageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SJLanguageManager.swift; sourceTree = "<group>"; };
-		C70C18FD221A7A1100E9DF8D /* SJDataCatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SJDataCatch.swift; sourceTree = "<group>"; };
-		C70C1901221A7A5200E9DF8D /* SlideInPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideInPresentationController.swift; sourceTree = "<group>"; };
-		C70C1902221A7A5200E9DF8D /* SlideInPresentationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideInPresentationManager.swift; sourceTree = "<group>"; };
-		C70C1903221A7A5300E9DF8D /* SlideInPresentationAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideInPresentationAnimator.swift; sourceTree = "<group>"; };
-		C70C190D221A7A7800E9DF8D /* SJAPILoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJAPILoader.swift; sourceTree = "<group>"; };
+		C70C1911221A7EB300E9DF8D /* SJLanguageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SJLanguageManager.swift; path = SJFrameSwift/Classes/SJLanguageManager.swift; sourceTree = "<group>"; };
+		C70C1912221A7EB300E9DF8D /* SlideInPresentationAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SlideInPresentationAnimator.swift; path = SJFrameSwift/Classes/SlideInPresentationAnimator.swift; sourceTree = "<group>"; };
+		C70C1913221A7EB300E9DF8D /* SJAPILoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SJAPILoader.swift; path = SJFrameSwift/Classes/SJAPILoader.swift; sourceTree = "<group>"; };
+		C70C1914221A7EB300E9DF8D /* SJDataCatch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SJDataCatch.swift; path = SJFrameSwift/Classes/SJDataCatch.swift; sourceTree = "<group>"; };
+		C70C1915221A7EB400E9DF8D /* SlideInPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SlideInPresentationController.swift; path = SJFrameSwift/Classes/SlideInPresentationController.swift; sourceTree = "<group>"; };
+		C70C1916221A7EB400E9DF8D /* SlideInPresentationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SlideInPresentationManager.swift; path = SJFrameSwift/Classes/SlideInPresentationManager.swift; sourceTree = "<group>"; };
 		CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		D11409DB61908BB80468FE7E24398051 /* Pods-SJFrameSwift_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SJFrameSwift_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		D3B7FAC6F2E1DDB8A8741203E7B09BE1 /* Pods-SJFrameSwift_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SJFrameSwift_Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -175,12 +175,12 @@
 		7BF4E963DCD1CADF32144C18DAB29861 /* SJFrameSwift */ = {
 			isa = PBXGroup;
 			children = (
-				C70C190D221A7A7800E9DF8D /* SJAPILoader.swift */,
-				C70C1903221A7A5300E9DF8D /* SlideInPresentationAnimator.swift */,
-				C70C1901221A7A5200E9DF8D /* SlideInPresentationController.swift */,
-				C70C1902221A7A5200E9DF8D /* SlideInPresentationManager.swift */,
-				C70C18FD221A7A1100E9DF8D /* SJDataCatch.swift */,
-				C70C18F9221A79A700E9DF8D /* SJLanguageManager.swift */,
+				C70C1913221A7EB300E9DF8D /* SJAPILoader.swift */,
+				C70C1914221A7EB300E9DF8D /* SJDataCatch.swift */,
+				C70C1911221A7EB300E9DF8D /* SJLanguageManager.swift */,
+				C70C1912221A7EB300E9DF8D /* SlideInPresentationAnimator.swift */,
+				C70C1915221A7EB400E9DF8D /* SlideInPresentationController.swift */,
+				C70C1916221A7EB400E9DF8D /* SlideInPresentationManager.swift */,
 				55C761D5FC540219ACD99845BAAAA7A5 /* SJView.swift */,
 				C70C18D7221A767500E9DF8D /* Constants.swift */,
 				3503D6C77808709D76096D38AE2F5D9D /* Pod */,
@@ -407,13 +407,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C70C190B221A7A5300E9DF8D /* SlideInPresentationAnimator.swift in Sources */,
-				C70C18FB221A79A700E9DF8D /* SJLanguageManager.swift in Sources */,
-				C70C190F221A7A7800E9DF8D /* SJAPILoader.swift in Sources */,
+				C70C191E221A7EB400E9DF8D /* SJAPILoader.swift in Sources */,
+				C70C1918221A7EB400E9DF8D /* SJLanguageManager.swift in Sources */,
+				C70C1921221A7EB400E9DF8D /* SJDataCatch.swift in Sources */,
+				C70C1924221A7EB400E9DF8D /* SlideInPresentationController.swift in Sources */,
+				C70C1927221A7EB400E9DF8D /* SlideInPresentationManager.swift in Sources */,
+				C70C191B221A7EB400E9DF8D /* SlideInPresentationAnimator.swift in Sources */,
 				833FDDDAE0FB28A639922800C369E994 /* Pods-SJFrameSwift_Tests-dummy.m in Sources */,
-				C70C18FF221A7A1100E9DF8D /* SJDataCatch.swift in Sources */,
-				C70C1905221A7A5300E9DF8D /* SlideInPresentationController.swift in Sources */,
-				C70C1908221A7A5300E9DF8D /* SlideInPresentationManager.swift in Sources */,
 				C70C18D9221A767500E9DF8D /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -422,13 +422,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C70C190A221A7A5300E9DF8D /* SlideInPresentationAnimator.swift in Sources */,
-				C70C18FA221A79A700E9DF8D /* SJLanguageManager.swift in Sources */,
-				C70C190E221A7A7800E9DF8D /* SJAPILoader.swift in Sources */,
+				C70C191D221A7EB400E9DF8D /* SJAPILoader.swift in Sources */,
+				C70C1917221A7EB400E9DF8D /* SJLanguageManager.swift in Sources */,
+				C70C1920221A7EB400E9DF8D /* SJDataCatch.swift in Sources */,
+				C70C1923221A7EB400E9DF8D /* SlideInPresentationController.swift in Sources */,
+				C70C1926221A7EB400E9DF8D /* SlideInPresentationManager.swift in Sources */,
+				C70C191A221A7EB400E9DF8D /* SlideInPresentationAnimator.swift in Sources */,
 				E25D9E45E54BCA19CD7361528E589B68 /* Pods-SJFrameSwift_Example-dummy.m in Sources */,
-				C70C18FE221A7A1100E9DF8D /* SJDataCatch.swift in Sources */,
-				C70C1904221A7A5300E9DF8D /* SlideInPresentationController.swift in Sources */,
-				C70C1907221A7A5300E9DF8D /* SlideInPresentationManager.swift in Sources */,
 				C70C18D8221A767500E9DF8D /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -437,15 +437,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C70C191F221A7EB400E9DF8D /* SJAPILoader.swift in Sources */,
+				C70C1928221A7EB400E9DF8D /* SlideInPresentationManager.swift in Sources */,
 				515FB62AAD79F23F21FF23A022D8834E /* SJView.swift in Sources */,
-				C70C190C221A7A5300E9DF8D /* SlideInPresentationAnimator.swift in Sources */,
-				C70C1900221A7A1100E9DF8D /* SJDataCatch.swift in Sources */,
-				C70C1910221A7A7800E9DF8D /* SJAPILoader.swift in Sources */,
+				C70C191C221A7EB400E9DF8D /* SlideInPresentationAnimator.swift in Sources */,
 				0AEC3427AB62BA99D8912594252BCBEB /* SJFrameSwift-dummy.m in Sources */,
-				C70C18FC221A79A700E9DF8D /* SJLanguageManager.swift in Sources */,
-				C70C1906221A7A5300E9DF8D /* SlideInPresentationController.swift in Sources */,
+				C70C1919221A7EB400E9DF8D /* SJLanguageManager.swift in Sources */,
+				C70C1922221A7EB400E9DF8D /* SJDataCatch.swift in Sources */,
+				C70C1925221A7EB400E9DF8D /* SlideInPresentationController.swift in Sources */,
 				C70C18DA221A767500E9DF8D /* Constants.swift in Sources */,
-				C70C1909221A7A5300E9DF8D /* SlideInPresentationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
