@@ -569,11 +569,11 @@ open class SJViewController: UIViewController {
         
     }
     
-    public func keyboardWillBeHidden() -> Void {
+    open func keyboardWillBeHidden() -> Void {
         //
     }
     
-    public func keyboardWasUpdatedVisibleSize(size:CGSize) -> Void {
+    open func keyboardWasUpdatedVisibleSize(size:CGSize) -> Void {
         //
     }
     
