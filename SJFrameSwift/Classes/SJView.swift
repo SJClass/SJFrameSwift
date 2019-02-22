@@ -547,15 +547,15 @@ open class SJViewController: UIViewController {
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
     }
     
-    @objc open func sjkeyboardWillShow(notification: NSNotification) {
+    @objc func sjkeyboardWillShow(notification: NSNotification) {
         print("keyboardWillShow")
     }
     
-    @objc open func sjkeyboardWillHide(notification: NSNotification){
+    @objc func sjkeyboardWillHide(notification: NSNotification){
         print("keyboardWillHide")
         self.keyboardWillBeHidden();
     }
-    @objc open func sjkeyboardWillChange(notification: NSNotification) {
+    @objc func sjkeyboardWillChange(notification: NSNotification) {
         /*
          let duration = notification.userInfo![UIKeyboardAnimationDurationUserInfoKey] as! Double
          let curve = notification.userInfo![UIKeyboardAnimationCurveUserInfoKey] as! UInt
@@ -569,11 +569,11 @@ open class SJViewController: UIViewController {
         
     }
     
-    func keyboardWillBeHidden() -> Void {
+    public func keyboardWillBeHidden() -> Void {
         //
     }
     
-    func keyboardWasUpdatedVisibleSize(size:CGSize) -> Void {
+    public func keyboardWasUpdatedVisibleSize(size:CGSize) -> Void {
         //
     }
     
