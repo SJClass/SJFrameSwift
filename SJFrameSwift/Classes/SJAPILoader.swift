@@ -95,6 +95,7 @@ open class SJAPILoader: UIView {
             
             view.addSubview(imgLogo);
             view.bringSubviewToFront(imgLogo);
+            imgLogo.center = view.center;
         }else{
             viewLogo.backgroundColor = UIColor.white;
         }
@@ -102,7 +103,7 @@ open class SJAPILoader: UIView {
         
         
         
-        imgLogo.center = view.center;
+       
         
         
         let backgroundShape = CAShapeLayer();
