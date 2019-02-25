@@ -86,7 +86,8 @@ open class SJAPILoader: UIView {
         viewLogo.layer.shadowOffset = CGSize(width: 1, height: 1);
         view.addSubview(viewLogo);
         
-        if let image = #imageLiteral(resourceName: "imgDefaultFilter"){
+
+        if let image = UIImage(named: "loaderIcon"){
             let imgLogo = UIImageView(frame: CGRect(x: 0, y: 0, width: 40, height: 40));
             imgLogo.backgroundColor = UIColor.clear
             imgLogo.image = image;
