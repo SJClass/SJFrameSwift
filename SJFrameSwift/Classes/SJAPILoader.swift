@@ -96,6 +96,7 @@ open class SJAPILoader: UIView {
             view.addSubview(imgLogo);
             view.bringSubviewToFront(imgLogo);
             imgLogo.center = view.center;
+            animateScaleUp(status: true, view: imgLogo);
         }else{
             viewLogo.backgroundColor = UIColor.white;
         }
@@ -115,7 +116,7 @@ open class SJAPILoader: UIView {
         backgroundShape.fillColor = UIColor.clear.cgColor
         
         animateScaleUp(status: true, view: viewLogo);
-        animateScaleUp(status: true, view: imgLogo);
+       // animateScaleUp(status: true, view: imgLogo);
         
         var animations = [CABasicAnimation]()
         
