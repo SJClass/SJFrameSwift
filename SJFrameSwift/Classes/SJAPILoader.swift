@@ -84,15 +84,22 @@ open class SJAPILoader: UIView {
         viewLogo.layer.cornerRadius = 35;
         viewLogo.layer.shadowColor = UIColor.lightGray.cgColor;
         viewLogo.layer.shadowOffset = CGSize(width: 1, height: 1);
-        
-        let imgLogo = UIImageView(frame: CGRect(x: 0, y: 0, width: 40, height: 40));
-        imgLogo.backgroundColor = UIColor.clear
-        imgLogo.image = #imageLiteral(resourceName: "imgDefaultFilter");
-        imgLogo.contentMode = UIView.ContentMode.scaleAspectFit;
         view.addSubview(viewLogo);
-        view.addSubview(imgLogo);
         
-        view.bringSubviewToFront(imgLogo);
+        if let image = #imageLiteral(resourceName: "imgDefaultFilter"){
+            let imgLogo = UIImageView(frame: CGRect(x: 0, y: 0, width: 40, height: 40));
+            imgLogo.backgroundColor = UIColor.clear
+            imgLogo.image = image;
+            imgLogo.contentMode = UIView.ContentMode.scaleAspectFit;
+            
+            view.addSubview(imgLogo);
+            view.bringSubviewToFront(imgLogo);
+        }else{
+            viewLogo.backgroundColor = UIColor.white;
+        }
+        
+        
+        
         
         imgLogo.center = view.center;
         
