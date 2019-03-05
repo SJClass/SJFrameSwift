@@ -39,6 +39,9 @@
 		C719CA88221FDBE10020F797 /* SJTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C719CA87221FDBE00020F797 /* SJTextField.swift */; };
 		C719CA89221FDBE10020F797 /* SJTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C719CA87221FDBE00020F797 /* SJTextField.swift */; };
 		C719CA8A221FDBE10020F797 /* SJTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C719CA87221FDBE00020F797 /* SJTextField.swift */; };
+		C722A5B6222E49B100278CCB /* SJSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C722A5B5222E49B100278CCB /* SJSegmentedControl.swift */; };
+		C722A5B7222E49B100278CCB /* SJSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C722A5B5222E49B100278CCB /* SJSegmentedControl.swift */; };
+		C722A5B8222E49B100278CCB /* SJSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C722A5B5222E49B100278CCB /* SJSegmentedControl.swift */; };
 		C7241960221ABF0E0039276F /* SJNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C724195F221ABF0D0039276F /* SJNavigationController.swift */; };
 		C7241961221ABF0E0039276F /* SJNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C724195F221ABF0D0039276F /* SJNavigationController.swift */; };
 		C7241962221ABF0E0039276F /* SJNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C724195F221ABF0D0039276F /* SJNavigationController.swift */; };
@@ -97,6 +100,7 @@
 		C70C1916221A7EB400E9DF8D /* SlideInPresentationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SlideInPresentationManager.swift; path = SJFrameSwift/Classes/SlideInPresentationManager.swift; sourceTree = "<group>"; };
 		C70C1929221A80AA00E9DF8D /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = SJFrameSwift/Classes/Constants.swift; sourceTree = "<group>"; };
 		C719CA87221FDBE00020F797 /* SJTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SJTextField.swift; path = SJFrameSwift/Classes/SJTextField.swift; sourceTree = "<group>"; };
+		C722A5B5222E49B100278CCB /* SJSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SJSegmentedControl.swift; sourceTree = "<group>"; };
 		C724195F221ABF0D0039276F /* SJNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SJNavigationController.swift; path = SJFrameSwift/Classes/SJNavigationController.swift; sourceTree = "<group>"; };
 		CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		D11409DB61908BB80468FE7E24398051 /* Pods-SJFrameSwift_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SJFrameSwift_Example.debug.xcconfig"; sourceTree = "<group>"; };
@@ -184,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				C724195F221ABF0D0039276F /* SJNavigationController.swift */,
+				C722A5B5222E49B100278CCB /* SJSegmentedControl.swift */,
 				C70C1929221A80AA00E9DF8D /* Constants.swift */,
 				C70C1913221A7EB300E9DF8D /* SJAPILoader.swift */,
 				C70C1914221A7EB300E9DF8D /* SJDataCatch.swift */,
@@ -423,6 +428,7 @@
 				C70C1918221A7EB400E9DF8D /* SJLanguageManager.swift in Sources */,
 				C70C1921221A7EB400E9DF8D /* SJDataCatch.swift in Sources */,
 				C70C1924221A7EB400E9DF8D /* SlideInPresentationController.swift in Sources */,
+				C722A5B7222E49B100278CCB /* SJSegmentedControl.swift in Sources */,
 				C70C1927221A7EB400E9DF8D /* SlideInPresentationManager.swift in Sources */,
 				C70C191B221A7EB400E9DF8D /* SlideInPresentationAnimator.swift in Sources */,
 				833FDDDAE0FB28A639922800C369E994 /* Pods-SJFrameSwift_Tests-dummy.m in Sources */,
@@ -440,6 +446,7 @@
 				C70C1917221A7EB400E9DF8D /* SJLanguageManager.swift in Sources */,
 				C70C1920221A7EB400E9DF8D /* SJDataCatch.swift in Sources */,
 				C70C1923221A7EB400E9DF8D /* SlideInPresentationController.swift in Sources */,
+				C722A5B6222E49B100278CCB /* SJSegmentedControl.swift in Sources */,
 				C70C1926221A7EB400E9DF8D /* SlideInPresentationManager.swift in Sources */,
 				C70C191A221A7EB400E9DF8D /* SlideInPresentationAnimator.swift in Sources */,
 				E25D9E45E54BCA19CD7361528E589B68 /* Pods-SJFrameSwift_Example-dummy.m in Sources */,
@@ -452,6 +459,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C70C191F221A7EB400E9DF8D /* SJAPILoader.swift in Sources */,
+				C722A5B8222E49B100278CCB /* SJSegmentedControl.swift in Sources */,
 				C70C1928221A7EB400E9DF8D /* SlideInPresentationManager.swift in Sources */,
 				515FB62AAD79F23F21FF23A022D8834E /* SJView.swift in Sources */,
 				C719CA8A221FDBE10020F797 /* SJTextField.swift in Sources */,
