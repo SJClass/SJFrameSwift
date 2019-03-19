@@ -243,7 +243,7 @@ extension UIImageView/*:URLSessionDelegate, URLSessionDownloadDelegate*/{
      }
      */
     
-    func downloadImage(url:String) -> Void {
+    public func downloadImage(url:String) -> Void {
         //let url = "http://www.intrawallpaper.com/static/images/hd-wallpapers-8_FY4tW4s.jpg";
         guard let URlImage = URL(string: url) else {
             return;
