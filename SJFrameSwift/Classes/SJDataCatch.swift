@@ -21,7 +21,7 @@ open class SJDataCache{
     //        return sharedDataCache;
     //    }
     
-    enum Directory {
+    public enum Directory {
         case documents
         case caches
     }
@@ -44,7 +44,7 @@ open class SJDataCache{
         }
     }
     
-    static func store(_ data:Data, to directory: Directory, as fileName: String) {
+    static public func store(_ data:Data, to directory: Directory, as fileName: String) {
         let url = getURL(for: directory).appendingPathComponent(self.getDataFileName(name: fileName), isDirectory: false)
         print("Image store URL:" + url.path)
         //let encoder = JSONEncoder()
@@ -59,7 +59,7 @@ open class SJDataCache{
         }
     }
     
-    static func retrieve(_ fileName: String, from directory: Directory) -> Data? {
+    static public func retrieve(_ fileName: String, from directory: Directory) -> Data? {
         let url = getURL(for: directory).appendingPathComponent(self.getDataFileName(name: fileName), isDirectory: false)
         print("Image retrieve URL:" + url.path)
         if !FileManager.default.fileExists(atPath: url.path) {
@@ -81,7 +81,7 @@ open class SJDataCache{
         }
     }
     
-    static func fileExists(_ fileName: String, in directory: Directory) -> Bool {
+    static public func fileExists(_ fileName: String, in directory: Directory) -> Bool {
         let url = getURL(for: directory).appendingPathComponent(self.getDataFileName(name: fileName), isDirectory: false)
         return FileManager.default.fileExists(atPath: url.path)
     }

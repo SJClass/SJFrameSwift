@@ -221,6 +221,23 @@ open class SJViewLocal: UIView {
     
 }
 
+extension UIImage {
+    public func resized(withPercentage percentage: CGFloat) -> UIImage? {
+        let canvasSize = CGSize(width: size.width * percentage, height: size.height * percentage)
+        UIGraphicsBeginImageContextWithOptions(canvasSize, false, scale)
+        defer { UIGraphicsEndImageContext() }
+        draw(in: CGRect(origin: .zero, size: canvasSize))
+        return UIGraphicsGetImageFromCurrentImageContext()
+    }
+    public func resized(toWidth width: CGFloat) -> UIImage? {
+        let canvasSize = CGSize(width: width, height: CGFloat(ceil(width/size.width * size.height)))
+        UIGraphicsBeginImageContextWithOptions(canvasSize, false, scale)
+        defer { UIGraphicsEndImageContext() }
+        draw(in: CGRect(origin: .zero, size: canvasSize))
+        return UIGraphicsGetImageFromCurrentImageContext()
+    }
+}
+
 extension UIImageView/*:URLSessionDelegate, URLSessionDownloadDelegate*/{
     
     /*
@@ -243,8 +260,59 @@ extension UIImageView/*:URLSessionDelegate, URLSessionDownloadDelegate*/{
      }
      */
     
+    public func downloadImage(url:String,finish:@escaping (_ status:Bool,_ image:UIImage?)->()) -> Void{
+        guard let URlImage = URL(string: url) else {
+            return;
+        }
+        print("Image checked URL:" + url)
+        if(SJDataCache.fileExists(url, in: SJDataCache.Directory.caches)){
+            if let imageCacheData = SJDataCache.retrieve(url, from: SJDataCache.Directory.caches) as Data?{
+                if let image:UIImage = UIImage(data: imageCacheData){
+                    DispatchQueue.main.async(execute: { () -> Void in
+                        //self.image = image;
+                        finish(true,image)
+                    })
+                }
+                return;
+            }
+        }
+        
+        //let url:URL! = URL(string: "https://itunes.apple.com/search?term=flappy&entity=software")
+        var task: URLSessionDownloadTask!
+        var session: URLSession!
+        session = URLSession.shared
+        task = URLSessionDownloadTask()
+        task = session.downloadTask(with: URlImage, completionHandler: { (location: URL?, response: URLResponse?, error: Error?) -> Void in
+            
+            if location != nil{
+                let data:Data! = try? Data(contentsOf: location!)
+                print("Image saved URL:" + url)
+                if let image = UIImage(data: data){
+                    SJDataCache.store(data, to: .caches, as: url)
+                    DispatchQueue.main.async(execute: { () -> Void in
+                        // self.image = image;
+                        finish(true,image)
+                    })
+                }
+            }else{
+                DispatchQueue.main.async(execute: { () -> Void in
+                    //self.image = nil;
+                    finish(false,nil)
+                })
+            }
+        })
+        task.resume()
+    }
+    
     public func downloadImage(url:String) -> Void {
+        
+        downloadImage(url: url) { (status, image) in
+            if status{
+                self.image = image;
+            }
+        }
         //let url = "http://www.intrawallpaper.com/static/images/hd-wallpapers-8_FY4tW4s.jpg";
+        /*
         guard let URlImage = URL(string: url) else {
             return;
         }
@@ -284,7 +352,7 @@ extension UIImageView/*:URLSessionDelegate, URLSessionDownloadDelegate*/{
             }
         })
         task.resume()
-        
+        */
         /*
          let config = URLSessionConfiguration.default
          let session = URLSession(configuration: config, delegate: self, delegateQueue: nil)
