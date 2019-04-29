@@ -34,13 +34,14 @@ open class SJNavigationController: UINavigationController,UIGestureRecognizerDel
         self.interactivePopGestureRecognizer?.delegate = self;
     }
     
-    private func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
+    public func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
         if(self.viewControllers.count>1){
             return true;
         }else{
-             return false;
+            return false;
         }
     }
+    
     /*
     // MARK: - Navigation
 
