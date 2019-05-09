@@ -8,16 +8,34 @@
 
 import UIKit
 
-open class SJAPILoader: UIView {
-
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+open class SJFrame{
+    
+    open var loaderViewBackgroundColor:UIColor = UIColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.15)
+    
+    open var loaderBackgroundColor:UIColor = UIColor.white
+    open var loaderShadowColor:UIColor = UIColor.lightGray
+    open var loaderStrokeColor:UIColor = UIColor.red//(rgb: 0x38B1FF)
+    
+    
+    public static let settings = SJFrame()
+    
+    init() {
+        
     }
-    */
+    
+}
 
+open class SJAPILoader: UIView {
+    
+    
+    /*
+     // Only override draw() if you perform custom drawing.
+     // An empty implementation adversely affects performance during animation.
+     override func draw(_ rect: CGRect) {
+     // Drawing code
+     }
+     */
+    
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -31,7 +49,7 @@ open class SJAPILoader: UIView {
     
     func setup() {
         let view = UIView(frame: bounds);
-        view.backgroundColor = UIColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.1);
+        view.backgroundColor = SJFrame.settings.loaderViewBackgroundColor;//UIColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.1);
         view.frame = bounds
         
         view.autoresizingMask = [UIView.AutoresizingMask.flexibleWidth,
@@ -41,13 +59,13 @@ open class SJAPILoader: UIView {
         animateOpacityToVisible(status: true, view: view);
         view.translatesAutoresizingMaskIntoConstraints = false;
         /*
-        self.addConstraint(pin(item: view, attribute: NSLayoutAttribute.top))
-        self.addConstraint(pin(item: view, attribute: NSLayoutAttribute.left))
-        self.addConstraint(pin(item: view, attribute: NSLayoutAttribute.bottom))
-        self.addConstraint(pin(item: view, attribute: NSLayoutAttribute.right))
-        // Add our border here and every custom setup
-        */
-       // addActivityLoader(view: view);
+         self.addConstraint(pin(item: view, attribute: NSLayoutAttribute.top))
+         self.addConstraint(pin(item: view, attribute: NSLayoutAttribute.left))
+         self.addConstraint(pin(item: view, attribute: NSLayoutAttribute.bottom))
+         self.addConstraint(pin(item: view, attribute: NSLayoutAttribute.right))
+         // Add our border here and every custom setup
+         */
+        // addActivityLoader(view: view);
         addActivityWithLogo(view: view);
         //addActivityLoader(view: view);
     }
@@ -60,13 +78,13 @@ open class SJAPILoader: UIView {
     func addActivityLoader(view:UIView) -> Void {
         
         /*
-        UIActivityIndicatorView *indicator = [[UIActivityIndicatorView alloc]initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
-        indicator.frame = CGRectMake(0.0, 0.0, 40.0, 40.0);
-        indicator.center = self.view.center;
-        [self.view addSubview:indicator];
-        [indicator bringSubviewToFront:self.view];
-        [UIApplication sharedApplication].networkActivityIndicatorVisible = TRUE;
- */
+         UIActivityIndicatorView *indicator = [[UIActivityIndicatorView alloc]initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+         indicator.frame = CGRectMake(0.0, 0.0, 40.0, 40.0);
+         indicator.center = self.view.center;
+         [self.view addSubview:indicator];
+         [indicator bringSubviewToFront:self.view];
+         [UIApplication sharedApplication].networkActivityIndicatorVisible = TRUE;
+         */
         
         let indicator = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.whiteLarge);
         indicator.frame = CGRect(x: 0, y: 0, width: 40, height: 40);
@@ -80,13 +98,13 @@ open class SJAPILoader: UIView {
     func addActivityWithLogo(view:UIView) -> Void {
         let viewLogo = UIView(frame: CGRect(x: 0, y: 0, width: 70, height: 70));
         viewLogo.center = view.center;
-        viewLogo.backgroundColor = UIColor.clear;
+        viewLogo.backgroundColor = SJFrame.settings.loaderBackgroundColor;//UIColor.clear;
         viewLogo.layer.cornerRadius = 35;
-        viewLogo.layer.shadowColor = UIColor.lightGray.cgColor;
+        viewLogo.layer.shadowColor = SJFrame.settings.loaderShadowColor.cgColor;//UIColor.lightGray.cgColor;
         viewLogo.layer.shadowOffset = CGSize(width: 1, height: 1);
         view.addSubview(viewLogo);
         
-
+        
         if let image = UIImage(named: "loaderIcon"){
             let imgLogo = UIImageView(frame: CGRect(x: 0, y: 0, width: 40, height: 40));
             imgLogo.backgroundColor = UIColor.clear
@@ -98,25 +116,25 @@ open class SJAPILoader: UIView {
             imgLogo.center = view.center;
             animateScaleUp(status: true, view: imgLogo);
         }else{
-            viewLogo.backgroundColor = UIColor.white;
+            viewLogo.backgroundColor = SJFrame.settings.loaderBackgroundColor//UIColor.white;
         }
         
         
         
         
-       
+        
         
         
         let backgroundShape = CAShapeLayer();
         backgroundShape.frame = frame
         backgroundShape.path = UIBezierPath(ovalIn: viewLogo.frame).cgPath
         backgroundShape.position = view.center
-        backgroundShape.strokeColor = UIColor(rgb: 0x38B1FF).cgColor//UIColor.black.cgColor
+        backgroundShape.strokeColor = SJFrame.settings.loaderStrokeColor.cgColor //UIColor(rgb: 0x38B1FF).cgColor//UIColor.black.cgColor
         backgroundShape.lineWidth = 1;
         backgroundShape.fillColor = UIColor.clear.cgColor
         
         animateScaleUp(status: true, view: viewLogo);
-       // animateScaleUp(status: true, view: imgLogo);
+        // animateScaleUp(status: true, view: imgLogo);
         
         var animations = [CABasicAnimation]()
         
@@ -145,15 +163,15 @@ open class SJAPILoader: UIView {
         animation3.duration  = 1.5;
         animation3.repeatCount = MAXFLOAT;
         /*
-        animation3.beginTime = 0.5;
-        animation3.fromValue = 0
-        animation3.toValue = 2 * Double.pi;
-        animation3.duration = 1.0
-        //animation2.autoreverses = true;
-        //animation2.repeatCount = 20;
-        animation3.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut);
-        //animations.append(animation2);
-        */
+         animation3.beginTime = 0.5;
+         animation3.fromValue = 0
+         animation3.toValue = 2 * Double.pi;
+         animation3.duration = 1.0
+         //animation2.autoreverses = true;
+         //animation2.repeatCount = 20;
+         animation3.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut);
+         //animations.append(animation2);
+         */
         let group = CAAnimationGroup()
         group.duration = 1.5
         group.repeatCount = Float.greatestFiniteMagnitude;
@@ -178,10 +196,10 @@ open class SJAPILoader: UIView {
         view.layer.transform = CATransform3DMakeScale(CGFloat(scaleValue), CGFloat(scaleValue), 1);
         scaleValue = status ? 1.0 : 0.5;
         /*
-        UIView.animate(withDuration: 0.3) {
-            view.layer.transform = CATransform3DMakeScale(CGFloat(scaleValue), CGFloat(scaleValue), 1);
-        }
- */
+         UIView.animate(withDuration: 0.3) {
+         view.layer.transform = CATransform3DMakeScale(CGFloat(scaleValue), CGFloat(scaleValue), 1);
+         }
+         */
         UIView.animate(withDuration: 0.5, delay: 0.0, usingSpringWithDamping: 0.6, initialSpringVelocity: 0.4, options: UIView.AnimationOptions.curveEaseInOut, animations: {
             view.layer.transform = CATransform3DMakeScale(CGFloat(scaleValue), CGFloat(scaleValue), 1);
         }) { (status) in
