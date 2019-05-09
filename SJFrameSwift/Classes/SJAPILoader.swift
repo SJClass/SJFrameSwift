@@ -26,6 +26,10 @@ open class SJFrame{
         
     }
     
+    public func setLoaderSize(size:Int){
+        self.loaderSize = size;
+    }
+    
 }
 
 open class SJAPILoader: UIView {
