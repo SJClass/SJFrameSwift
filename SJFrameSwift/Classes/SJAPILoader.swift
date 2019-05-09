@@ -16,6 +16,9 @@ open class SJFrame{
     open var loaderShadowColor:UIColor = UIColor.lightGray
     open var loaderStrokeColor:UIColor = UIColor.red//(rgb: 0x38B1FF)
     
+    open var loaderSize:Int = 70
+    open var loaderIconSize:Int = 40
+    open var loaderStrokeOffset:Int = 0
     
     public static let settings = SJFrame()
     
@@ -87,7 +90,7 @@ open class SJAPILoader: UIView {
          */
         
         let indicator = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.whiteLarge);
-        indicator.frame = CGRect(x: 0, y: 0, width: 40, height: 40);
+        indicator.frame = CGRect(x: 0, y: 0, width: SJFrame.settings.loaderIconSize, height: SJFrame.settings.loaderIconSize);
         indicator.center = view.center;
         indicator.tintColor = UIColor(rgb: 0x00d7a2);
         view.addSubview(indicator);
@@ -96,7 +99,7 @@ open class SJAPILoader: UIView {
     }
     
     func addActivityWithLogo(view:UIView) -> Void {
-        let viewLogo = UIView(frame: CGRect(x: 0, y: 0, width: 70, height: 70));
+        let viewLogo = UIView(frame: CGRect(x: 0, y: 0, width: SJFrame.settings.loaderSize, height: SJFrame.settings.loaderSize));
         viewLogo.center = view.center;
         viewLogo.backgroundColor = SJFrame.settings.loaderBackgroundColor;//UIColor.clear;
         viewLogo.layer.cornerRadius = 35;
@@ -127,7 +130,7 @@ open class SJAPILoader: UIView {
         
         let backgroundShape = CAShapeLayer();
         backgroundShape.frame = frame
-        backgroundShape.path = UIBezierPath(ovalIn: viewLogo.frame).cgPath
+        backgroundShape.path = UIBezierPath(ovalIn: CGRect(x: viewLogo.frame.origin.x, y: viewLogo.frame.origin.y, width: viewLogo.frame.size.width - CGFloat(SJFrame.settings.loaderStrokeOffset), height: viewLogo.frame.size.height - CGFloat(SJFrame.settings.loaderStrokeOffset))).cgPath
         backgroundShape.position = view.center
         backgroundShape.strokeColor = SJFrame.settings.loaderStrokeColor.cgColor //UIColor(rgb: 0x38B1FF).cgColor//UIColor.black.cgColor
         backgroundShape.lineWidth = 1;
