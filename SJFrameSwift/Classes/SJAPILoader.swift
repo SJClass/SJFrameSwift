@@ -129,7 +129,8 @@ open class SJAPILoader: UIView {
             imgLogo.backgroundColor = UIColor.clear
             imgLogo.image = image;
             imgLogo.contentMode = UIView.ContentMode.scaleAspectFit;
-            
+            imgLogo.layer.cornerRadius = CGFloat(SJFrame.settings.loaderIconSize) * 0.5;
+            imgLogo.clipsToBounds = true
             view.addSubview(imgLogo);
             view.bringSubviewToFront(imgLogo);
             imgLogo.center = view.center;
