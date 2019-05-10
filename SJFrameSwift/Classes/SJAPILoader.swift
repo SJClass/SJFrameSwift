@@ -19,6 +19,7 @@ open class SJFrame{
     open var loaderSize:Int = 70
     open var loaderIconSize:Int = 40
     open var loaderStrokeOffset:Int = 0
+    open var loaderStrokeWidth:Int = 1
     
     public static let settings = SJFrame()
     
@@ -30,6 +31,17 @@ open class SJFrame{
         self.loaderSize = size;
     }
     
+    public func setLoaderIconSize(size:Int){
+        self.loaderIconSize = size;
+    }
+    
+    public func setloaderStrokeOffset(Offset:Int){
+        self.loaderStrokeOffset = Offset;
+    }
+    
+    public func setloaderStrokeWidth(width:Int){
+        self.loaderStrokeWidth = width;
+    }
 }
 
 open class SJAPILoader: UIView {
@@ -106,14 +118,14 @@ open class SJAPILoader: UIView {
         let viewLogo = UIView(frame: CGRect(x: 0, y: 0, width: SJFrame.settings.loaderSize, height: SJFrame.settings.loaderSize));
         viewLogo.center = view.center;
         viewLogo.backgroundColor = SJFrame.settings.loaderBackgroundColor;//UIColor.clear;
-        viewLogo.layer.cornerRadius = 35;
+        viewLogo.layer.cornerRadius = CGFloat(SJFrame.settings.loaderSize) * 0.5;
         viewLogo.layer.shadowColor = SJFrame.settings.loaderShadowColor.cgColor;//UIColor.lightGray.cgColor;
         viewLogo.layer.shadowOffset = CGSize(width: 1, height: 1);
         view.addSubview(viewLogo);
         
         
         if let image = UIImage(named: "loaderIcon"){
-            let imgLogo = UIImageView(frame: CGRect(x: 0, y: 0, width: 40, height: 40));
+            let imgLogo = UIImageView(frame: CGRect(x: 0, y: 0, width: SJFrame.settings.loaderIconSize, height: SJFrame.settings.loaderIconSize));
             imgLogo.backgroundColor = UIColor.clear
             imgLogo.image = image;
             imgLogo.contentMode = UIView.ContentMode.scaleAspectFit;
@@ -137,7 +149,7 @@ open class SJAPILoader: UIView {
         backgroundShape.path = UIBezierPath(ovalIn: CGRect(x: viewLogo.frame.origin.x, y: viewLogo.frame.origin.y, width: viewLogo.frame.size.width - CGFloat(SJFrame.settings.loaderStrokeOffset), height: viewLogo.frame.size.height - CGFloat(SJFrame.settings.loaderStrokeOffset))).cgPath
         backgroundShape.position = view.center
         backgroundShape.strokeColor = SJFrame.settings.loaderStrokeColor.cgColor //UIColor(rgb: 0x38B1FF).cgColor//UIColor.black.cgColor
-        backgroundShape.lineWidth = 1;
+        backgroundShape.lineWidth = SJFrame.settings.loaderStrokeWidth;
         backgroundShape.fillColor = UIColor.clear.cgColor
         
         animateScaleUp(status: true, view: viewLogo);
