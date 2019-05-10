@@ -149,7 +149,7 @@ open class SJAPILoader: UIView {
         backgroundShape.path = UIBezierPath(ovalIn: CGRect(x: viewLogo.frame.origin.x, y: viewLogo.frame.origin.y, width: viewLogo.frame.size.width - CGFloat(SJFrame.settings.loaderStrokeOffset), height: viewLogo.frame.size.height - CGFloat(SJFrame.settings.loaderStrokeOffset))).cgPath
         backgroundShape.position = view.center
         backgroundShape.strokeColor = SJFrame.settings.loaderStrokeColor.cgColor //UIColor(rgb: 0x38B1FF).cgColor//UIColor.black.cgColor
-        backgroundShape.lineWidth = SJFrame.settings.loaderStrokeWidth;
+        backgroundShape.lineWidth = CGFloat(SJFrame.settings.loaderStrokeWidth);
         backgroundShape.fillColor = UIColor.clear.cgColor
         
         animateScaleUp(status: true, view: viewLogo);
