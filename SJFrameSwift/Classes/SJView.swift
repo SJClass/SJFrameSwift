@@ -433,21 +433,24 @@ extension NSMutableAttributedString{
 
 extension UILabel {
     public func addString(str:String){
-        if let attribText = self.attributedText as? NSMutableAttributedString{
-            attribText.addString(str: str);//.append(NSAttributedString(string: str))
-            self.attributedText = attribText;
+        if let attribText = self.attributedText{
+            let attrib:NSMutableAttributedString = NSMutableAttributedString(attributedString: attribText)
+            attrib.addString(str: str);//.append(NSAttributedString(string: str))
+            self.attributedText = attrib;
         }
     }
     
     public func addStringStyle(Style:[NSAttributedString.Key:Any]){
-        if let attribText = self.attributedText as? NSMutableAttributedString{
-            attribText.addStringStyle(Style: Style)//.addAttributes(Style, range: NSRange(location: 0, length: attribText.length-1));
-            self.attributedText = attribText;
+        if let attribText = self.attributedText{
+            let attrib:NSMutableAttributedString = NSMutableAttributedString(attributedString: attribText)
+            attrib.addStringStyle(Style: Style)//.addAttributes(Style, range: NSRange(location: 0, length: attribText.length-1));
+            self.attributedText = attrib;
         }
     }
     
     public func addStringWithStyle(str:String,properties:[[NSAttributedString.Key:Any]]){
-        if let attribText = self.attributedText as? NSMutableAttributedString{
+        if let attribText = self.attributedText{
+             let attrib:NSMutableAttributedString = NSMutableAttributedString(attributedString: attribText)
             /*
              var strokeTextAttributes = [NSAttributedStringKey: Any]();
              for prop in properties {
@@ -456,14 +459,16 @@ extension UILabel {
              }
              }
              */
-            attribText.addStringWithStyle(str: str, properties: properties);//.append(NSAttributedString(string: str, attributes: strokeTextAttributes));
+            attrib.addStringWithStyle(str: str, properties: properties);//.append(NSAttributedString(string: str, attributes: strokeTextAttributes));
             
-            self.attributedText = attribText;
+            self.attributedText = attrib;
         }
     }
     
     public func addImage(image:UIImage){
-        if let attribText = self.attributedText as? NSMutableAttributedString{
+        if let attribText = self.attributedText{
+            let attrib:NSMutableAttributedString = NSMutableAttributedString(attributedString: attribText)
+            
             if let imageObj = image as UIImage? {
                 /*
                  let imageAttachment : NSTextAttachment = NSTextAttachment()
@@ -471,14 +476,15 @@ extension UILabel {
                  imageAttachment.bounds = CGRect(x: 0, y: -3, width: imageObj.size.width, height: imageObj.size.height);
                  attribText.append(NSAttributedString(attachment: imageAttachment))
                  */
-                attribText.addImage(image: imageObj);
-                self.attributedText = attribText;
+                attrib.addImage(image: imageObj);
+                self.attributedText = attrib;
             }
         }
     }
     
     public func addImage(image:UIImage,point:CGPoint){
-        if let attribText = self.attributedText as? NSMutableAttributedString{
+        if let attribText = self.attributedText{
+            let attrib:NSMutableAttributedString = NSMutableAttributedString(attributedString: attribText)
             if let imageObj = image as UIImage? {
                 /*
                  let imageAttachment : NSTextAttachment = NSTextAttachment()
@@ -486,8 +492,8 @@ extension UILabel {
                  imageAttachment.bounds = CGRect(x: point.x, y: point.y, width: imageObj.size.width, height: imageObj.size.height);
                  attribText.append(NSAttributedString(attachment: imageAttachment))
                  */
-                attribText.addImage(image: imageObj, point: point);
-                self.attributedText = attribText;
+                attrib.addImage(image: imageObj, point: point);
+                self.attributedText = attrib;
             }
         }
     }
