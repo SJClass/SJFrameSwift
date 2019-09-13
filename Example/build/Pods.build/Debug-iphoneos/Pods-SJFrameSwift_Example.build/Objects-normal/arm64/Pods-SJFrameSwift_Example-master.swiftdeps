@@ -1,0 +1,13 @@
+version: "Apple Swift version 5.1 (swiftlang-1100.0.270.13 clang-1100.0.33.7)"
+options: "9fbb97a85f43a70a36705d8adfec36db"
+build_time: [1568369377, 689877000]
+inputs:
+  "/Volumes/Data/Projects_git/iOS/SwiftFrame/SJFrameSwift/SJFrameSwift/Classes/SJTextField.swift": !dirty [1568369333, 738893323]
+  "/Volumes/Data/Projects_git/iOS/SwiftFrame/SJFrameSwift/SJFrameSwift/Classes/SJNavigationController.swift": !dirty [1568369333, 738565661]
+  "/Volumes/Data/Projects_git/iOS/SwiftFrame/SJFrameSwift/SJFrameSwift/Classes/SJAPILoader.swift": !dirty [1568369333, 737675779]
+  "/Volumes/Data/Projects_git/iOS/SwiftFrame/SJFrameSwift/SJFrameSwift/Classes/SJLanguageManager.swift": [1568369333, 738306342]
+  "/Volumes/Data/Projects_git/iOS/SwiftFrame/SJFrameSwift/SJFrameSwift/Classes/SJDataCatch.swift": [1568369333, 738016186]
+  "/Volumes/Data/Projects_git/iOS/SwiftFrame/SJFrameSwift/SJFrameSwift/Classes/SlideInPresentationController.swift": [1568369333, 739936673]
+  "/Volumes/Data/Projects_git/iOS/SwiftFrame/SJFrameSwift/SJFrameSwift/Classes/SlideInPresentationManager.swift": [1568369333, 740180366]
+  "/Volumes/Data/Projects_git/iOS/SwiftFrame/SJFrameSwift/SJFrameSwift/Classes/SlideInPresentationAnimator.swift": [1568369333, 739661796]
+  "/Volumes/Data/Projects_git/iOS/SwiftFrame/SJFrameSwift/SJFrameSwift/Classes/Constants.swift": [1568369333, 737245959]

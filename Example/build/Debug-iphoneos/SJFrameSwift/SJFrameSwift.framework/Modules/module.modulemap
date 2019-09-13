@@ -1,0 +1,11 @@
+framework module SJFrameSwift {
+  umbrella header "SJFrameSwift-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module SJFrameSwift.Swift {
+    header "SJFrameSwift-Swift.h"
+    requires objc
+}

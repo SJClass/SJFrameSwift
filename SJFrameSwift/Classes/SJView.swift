@@ -540,12 +540,21 @@ public class SJStringStyle {
         return strokeTextAttributes;
     }
     
+    /*
     public static func SuperScript(value:NSNumber) -> [NSAttributedString.Key:Any]{
         let strokeTextAttributes: [NSAttributedString.Key: Any] = [
             ((kCTSuperscriptAttributeName as CFString) as NSAttributedString.Key ) : value
         ]
         return strokeTextAttributes;
+    }*/
+    
+    public static func SuperScript(value:NSNumber) -> [NSAttributedString.Key:Any]{
+        let strokeTextAttributes: [NSAttributedString.Key: Any] = [
+            NSAttributedString.Key.baselineOffset : value
+        ]
+        return strokeTextAttributes;
     }
+    
     /*
      
      +(instancetype)initWithSuperScriptValue:(NSNumber*)value ofFont:(UIFont*)font{
