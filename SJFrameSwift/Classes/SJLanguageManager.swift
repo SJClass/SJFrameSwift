@@ -138,7 +138,7 @@ open class SJLanguageManager{
                 }
             }
         }else{
-            print("The language has already been set :)");
+            //print("The language has already been set :)");
         }
     }
     

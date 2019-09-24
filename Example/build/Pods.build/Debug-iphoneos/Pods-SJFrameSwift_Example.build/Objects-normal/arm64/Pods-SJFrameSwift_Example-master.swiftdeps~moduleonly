@@ -1,6 +1,6 @@
 version: "Apple Swift version 5.1 (swiftlang-1100.0.270.13 clang-1100.0.33.7)"
 options: "9fbb97a85f43a70a36705d8adfec36db"
-build_time: [1568369377, 689877000]
+build_time: [1569315672, 400105000]
 inputs:
   "/Volumes/Data/Projects_git/iOS/SwiftFrame/SJFrameSwift/SJFrameSwift/Classes/SJTextField.swift": !dirty [1568369333, 738893323]
   "/Volumes/Data/Projects_git/iOS/SwiftFrame/SJFrameSwift/SJFrameSwift/Classes/SJNavigationController.swift": !dirty [1568369333, 738565661]

@@ -44,9 +44,24 @@ open class SJDataCache{
         }
     }
     
+    static public func storeAsSecure(_ data:Data, to directory: Directory, as fileName: String) {
+        let url = getURL(for: directory).appendingPathComponent(self.getDataFileName(name: fileName), isDirectory: false)
+        //print("Image store URL:" + url.path)
+        //let encoder = JSONEncoder()
+        do {
+            //let data = try encoder.encode(object)
+            if FileManager.default.fileExists(atPath: url.path) {
+                try FileManager.default.removeItem(at: url)
+            }
+            FileManager.default.createFile(atPath: url.path, contents: data, attributes: [FileAttributeKey.protectionKey : FileProtectionType.complete])
+        } catch {
+            fatalError(error.localizedDescription)
+        }
+    }
+    
     static public func store(_ data:Data, to directory: Directory, as fileName: String) {
         let url = getURL(for: directory).appendingPathComponent(self.getDataFileName(name: fileName), isDirectory: false)
-        print("Image store URL:" + url.path)
+        //print("Image store URL:" + url.path)
         //let encoder = JSONEncoder()
         do {
             //let data = try encoder.encode(object)
@@ -61,7 +76,7 @@ open class SJDataCache{
     
     static public func retrieve(_ fileName: String, from directory: Directory) -> Data? {
         let url = getURL(for: directory).appendingPathComponent(self.getDataFileName(name: fileName), isDirectory: false)
-        print("Image retrieve URL:" + url.path)
+        //print("Image retrieve URL:" + url.path)
         if !FileManager.default.fileExists(atPath: url.path) {
             //fatalError("File at path \(url.path) does not exist!")
             return nil;

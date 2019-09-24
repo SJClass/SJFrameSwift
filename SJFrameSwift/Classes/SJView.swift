@@ -264,7 +264,7 @@ extension UIImageView/*:URLSessionDelegate, URLSessionDownloadDelegate*/{
         guard let URlImage = URL(string: url) else {
             return;
         }
-        print("Image checked URL:" + url)
+        //print("Image checked URL:" + url)
         if(SJDataCache.fileExists(url, in: SJDataCache.Directory.caches)){
             if let imageCacheData = SJDataCache.retrieve(url, from: SJDataCache.Directory.caches) as Data?{
                 if let image:UIImage = UIImage(data: imageCacheData){
@@ -286,7 +286,7 @@ extension UIImageView/*:URLSessionDelegate, URLSessionDownloadDelegate*/{
             
             if location != nil{
                 let data:Data! = try? Data(contentsOf: location!)
-                print("Image saved URL:" + url)
+                //print("Image saved URL:" + url)
                 if let image = UIImage(data: data){
                     SJDataCache.store(data, to: .caches, as: url)
                     DispatchQueue.main.async(execute: { () -> Void in
@@ -632,11 +632,11 @@ open class SJViewController: UIViewController {
     }
     
     @objc func sjkeyboardWillShow(notification: NSNotification) {
-        print("keyboardWillShow")
+        //print("keyboardWillShow")
     }
     
     @objc func sjkeyboardWillHide(notification: NSNotification){
-        print("keyboardWillHide")
+        //print("keyboardWillHide")
         self.keyboardWillBeHidden();
     }
     @objc func sjkeyboardWillChange(notification: NSNotification) {
