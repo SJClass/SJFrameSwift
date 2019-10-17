@@ -96,18 +96,23 @@ open class CheckInternet{
 
 
 extension SJViewController {
-    open override func awakeFromNib() {
-        super.awakeFromNib()
-        if SJLocalisedString.getSelectedLocale()?.countryCode?.lowercased() == "ar"{
-            navigationController?.view.semanticContentAttribute = .forceRightToLeft
-                   navigationController?.navigationBar.semanticContentAttribute = .forceRightToLeft
+    func setAwakeFromNib() {
+       
+        guard let lang = SJLocalisedString.getSelectedLocale(),let code =  lang.languageCode else {
+            return;
+        }
+        
+        if code.lowercased() == "ar"{
+                navigationController?.view.semanticContentAttribute = .forceRightToLeft
+                navigationController?.navigationBar.semanticContentAttribute = .forceRightToLeft
+            
         }else{
             navigationController?.view.semanticContentAttribute = .forceLeftToRight
-                   navigationController?.navigationBar.semanticContentAttribute = .forceLeftToRight
+            navigationController?.navigationBar.semanticContentAttribute = .forceLeftToRight
         }
-       
     }
 }
+
 
 extension UITextField{
    @IBInspectable var placeHolderColor: UIColor? {
