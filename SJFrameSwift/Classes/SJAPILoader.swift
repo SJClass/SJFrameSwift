@@ -8,41 +8,6 @@
 
 import UIKit
 
-open class SJFrame{
-    
-    open var loaderViewBackgroundColor:UIColor = UIColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.15)
-    
-    open var loaderBackgroundColor:UIColor = UIColor.white
-    open var loaderShadowColor:UIColor = UIColor.lightGray
-    open var loaderStrokeColor:UIColor = UIColor.red//(rgb: 0x38B1FF)
-    
-    open var loaderSize:Int = 70
-    open var loaderIconSize:Int = 40
-    open var loaderStrokeOffset:Int = 0
-    open var loaderStrokeWidth:Int = 1
-    
-    public static let settings = SJFrame()
-    
-    init() {
-        
-    }
-    
-    public func setLoaderSize(size:Int){
-        self.loaderSize = size;
-    }
-    
-    public func setLoaderIconSize(size:Int){
-        self.loaderIconSize = size;
-    }
-    
-    public func setloaderStrokeOffset(Offset:Int){
-        self.loaderStrokeOffset = Offset;
-    }
-    
-    public func setloaderStrokeWidth(width:Int){
-        self.loaderStrokeWidth = width;
-    }
-}
 
 open class SJAPILoader: UIView {
     

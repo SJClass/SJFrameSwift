@@ -61,7 +61,12 @@ open class SJTextField: UITextField {
             tmpDoneBtn.setTitle(" \(name) ", for: UIControl.State.normal);
             tmpDoneBtn.titleLabel?.textColor = self.textColor;
             tmpDoneBtn.titleLabel?.font = self.font;
-            tmpDoneBtn.tintColor = self.textColor;
+            if let color = SJFrame.settings.textFildToolbarTextColor{
+                tmpDoneBtn.tintColor = color;
+            }else{
+                tmpDoneBtn.tintColor = self.textColor;
+            }
+            
             tmpDoneBtn.backgroundColor = UIColor.clear;
             tmpDoneBtn.sizeToFit();
             tmpDoneBtn.frame = CGRect(x: 5, y: 5, width: tmpDoneBtn.frame.width, height: 32);

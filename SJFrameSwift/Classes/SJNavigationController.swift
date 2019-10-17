@@ -59,3 +59,4 @@ open class SJNavigationController: UINavigationController,UIGestureRecognizerDel
         self.modalPresentationStyle = .custom
     }
 }
+
