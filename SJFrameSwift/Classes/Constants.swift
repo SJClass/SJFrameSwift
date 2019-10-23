@@ -31,7 +31,12 @@ open class SJFrame{
     
     // TextView
     
-    open var textFildToolbarTextColor:UIColor?
+    open var textFieldToolbarTextColor:UIColor?
+    
+    
+    //
+    
+    open var isHaveRTL:Bool = false;
     
     public static let settings = SJFrame()
     
@@ -97,18 +102,19 @@ open class CheckInternet{
 
 extension SJViewController {
     func setAwakeFromNib() {
-       
-        guard let lang = SJLocalisedString.getSelectedLocale(),let code =  lang.languageCode else {
-            return;
-        }
-        
-        if code.lowercased() == "ar"{
+        if isHaveRTL{
+            guard let lang = SJLocalisedString.getSelectedLocale(),let code =  lang.languageCode else {
+                return;
+            }
+            
+            if code.lowercased() == "ar"{
                 navigationController?.view.semanticContentAttribute = .forceRightToLeft
                 navigationController?.navigationBar.semanticContentAttribute = .forceRightToLeft
-            
-        }else{
-            navigationController?.view.semanticContentAttribute = .forceLeftToRight
-            navigationController?.navigationBar.semanticContentAttribute = .forceLeftToRight
+                
+            }else{
+                navigationController?.view.semanticContentAttribute = .forceLeftToRight
+                navigationController?.navigationBar.semanticContentAttribute = .forceLeftToRight
+            }
         }
     }
 }
