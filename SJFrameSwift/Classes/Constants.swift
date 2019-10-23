@@ -60,7 +60,9 @@ open class SJFrame{
         self.loaderStrokeWidth = width;
     }
     
-    
+    public func setisHaveRTL(_ status:Bool){
+        self.isHaveRTL = status
+    }
     
     
 }
@@ -102,7 +104,7 @@ open class CheckInternet{
 
 extension SJViewController {
     func setAwakeFromNib() {
-        if isHaveRTL{
+        if SJFrame.settings.isHaveRTL{
             guard let lang = SJLocalisedString.getSelectedLocale(),let code =  lang.languageCode else {
                 return;
             }
