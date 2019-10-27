@@ -611,13 +611,15 @@ open class SJViewController: UIViewController {
     }
     
     public func showMessage(message :String) -> Void {
-        let alert:UIAlertController = UIAlertController(title: "Alert", message: message, preferredStyle: UIAlertController.Style.alert);
-        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.cancel, handler: { (alertAction) in
-            //self.dismiss(animated: true, completion: nil);
-        }))
-        self.present(alert, animated: true) {
-            //
-        };
+        DispatchQueue.main.async {
+             let alert:UIAlertController = UIAlertController(title: "Alert", message: message, preferredStyle: UIAlertController.Style.alert);
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.cancel, handler: { (alertAction) in
+                       //self.dismiss(animated: true, completion: nil);
+            }))
+            self.present(alert, animated: true) {
+                //
+            };
+        }
     }
     
     
