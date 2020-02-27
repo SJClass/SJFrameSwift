@@ -3,11 +3,11 @@
   'case-sensitive': 'false',
   'roots': [{
     'type': 'directory',
-    'name': "/Volumes/Data/Projects_git/iOS/SwiftFrame/SJFrameSwift/Example/build/Debug-iphoneos/Pods_SJFrameSwift_Example.framework/Modules"
+    'name': "/Users/arun/Desktop/Projects/iOS /Git/GIT-Swift-Frame/SJFrameSwift/Example/build/Debug-iphoneos/Pods_SJFrameSwift_Example.framework/Modules"
     'contents': [{
       'type': 'file',
       'name': "module.modulemap",
-      'external-contents': "/Volumes/Data/Projects_git/iOS/SwiftFrame/SJFrameSwift/Example/build/Pods.build/Debug-iphoneos/Pods-SJFrameSwift_Example.build/unextended-module.modulemap",
+      'external-contents': "/Users/arun/Desktop/Projects/iOS /Git/GIT-Swift-Frame/SJFrameSwift/Example/build/Pods.build/Debug-iphoneos/Pods-SJFrameSwift_Example.build/unextended-module.modulemap",
     }]
   }]
 }

@@ -87,7 +87,6 @@ depends-top-level:
 - "Bool"
 - "BooleanLiteralType"
 - "CAGradientLayer"
-- !private "CFString"
 - "CGFloat"
 - "CGPoint"
 - "CGRect"
@@ -153,7 +152,6 @@ depends-top-level:
 - "Void"
 - !private "assert"
 - !private "ceil"
-- !private "kCTSuperscriptAttributeName"
 - !private "print"
 depends-member:
 - !private ["s18AdditiveArithmeticP", "init"]
@@ -804,6 +802,7 @@ depends-member:
 - !private ["SQ", "assert"]
 - !private ["SQ", "async"]
 - !private ["SQ", "attributedText"]
+- !private ["SQ", "baselineOffset"]
 - !private ["SQ", "borderColor"]
 - !private ["SQ", "borderWidth"]
 - !private ["SQ", "bounds"]
@@ -974,6 +973,7 @@ depends-member:
 - !private ["SH", "assert"]
 - !private ["SH", "async"]
 - !private ["SH", "attributedText"]
+- !private ["SH", "baselineOffset"]
 - !private ["SH", "borderColor"]
 - !private ["SH", "borderWidth"]
 - !private ["SH", "bounds"]
@@ -1064,6 +1064,7 @@ depends-member:
 - !private ["SH", "userInfo"]
 - !private ["SH", "view"]
 - !private ["SH", "viewLoader"]
+- !private ["So21NSAttributedStringKeya", "baselineOffset"]
 - !private ["So21NSAttributedStringKeya", "font"]
 - !private ["So21NSAttributedStringKeya", "foregroundColor"]
 - !private ["So21NSAttributedStringKeya", "paragraphStyle"]
@@ -1730,6 +1731,7 @@ depends-member:
 - !private ["Sm", "init"]
 - !private ["Sm", "lowercased"]
 - !private ["SY", "alert"]
+- !private ["SY", "baselineOffset"]
 - !private ["SY", "byWordWrapping"]
 - !private ["SY", "cancel"]
 - !private ["SY", "custom"]
@@ -1750,7 +1752,6 @@ depends-member:
 - !private ["12SJFrameSwift11SJDataCacheC", "store"]
 - !private ["12SJFrameSwift17SJLanguageManagerC", "getSelectedLocale"]
 - !private ["12SJFrameSwift8SJLocaleV", "languageCode"]
-- !private ["12SJFrameSwift13SJStringStyleC", "CFString"]
 - !private ["12SJFrameSwift13SJStringStyleC", "CGFloat"]
 - ["12SJFrameSwift13SJStringStyleC", "Color"]
 - ["12SJFrameSwift13SJStringStyleC", "Float"]
@@ -1765,7 +1766,6 @@ depends-member:
 - ["12SJFrameSwift13SJStringStyleC", "UIColor"]
 - ["12SJFrameSwift13SJStringStyleC", "UIFont"]
 - ["12SJFrameSwift13SJStringStyleC", "init"]
-- !private ["12SJFrameSwift13SJStringStyleC", "kCTSuperscriptAttributeName"]
 - ["12SJFrameSwift8SJTabBarC", "CGSize"]
 - ["12SJFrameSwift8SJTabBarC", "deinit"]
 - ["12SJFrameSwift8SJTabBarC", "init"]
@@ -3230,6 +3230,7 @@ depends-member:
 - !private ["s26_ExpressibleByImageLiteralP", "scale"]
 - !private ["s26_ExpressibleByImageLiteralP", "size"]
 - !private ["s19_HasContiguousBytesP", "lowercased"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "baselineOffset"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "font"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "foregroundColor"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "init"]
@@ -3512,6 +3513,7 @@ depends-member:
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "viewLoader"]
 - !private ["So8_NSRangeV", "init"]
 - !private ["s21_ObjectiveCBridgeableP", "addSubview"]
+- !private ["s21_ObjectiveCBridgeableP", "baselineOffset"]
 - !private ["s21_ObjectiveCBridgeableP", "bounds"]
 - !private ["s21_ObjectiveCBridgeableP", "downloadTask"]
 - !private ["s21_ObjectiveCBridgeableP", "font"]
@@ -3528,6 +3530,7 @@ depends-member:
 - !private ["s21_ObjectiveCBridgeableP", "x"]
 - !private ["s21_ObjectiveCBridgeableP", "y"]
 - !private ["s21_ObjectiveCBridgeableP", "zero"]
+- !private ["s20_SwiftNewtypeWrapperP", "baselineOffset"]
 - !private ["s20_SwiftNewtypeWrapperP", "font"]
 - !private ["s20_SwiftNewtypeWrapperP", "foregroundColor"]
 - !private ["s20_SwiftNewtypeWrapperP", "paragraphStyle"]
@@ -3766,6 +3769,7 @@ depends-external:
 - "/Volumes/Data/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Foundation.swiftmodule/arm64.swiftmodule"
 - "/Volumes/Data/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreFoundation.swiftmodule/arm64.swiftmodule"
 - "/Volumes/Data/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreGraphics.swiftmodule/arm64.swiftmodule"
+- "/Volumes/Data/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Swift.swiftmodule/arm64.swiftmodule"
 - "/Volumes/Data/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/UIKit.swiftmodule/arm64.swiftmodule"
 - "/Volumes/Data/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/SwiftOnoneSupport.swiftmodule/arm64.swiftmodule"
 - "/Volumes/Data/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Combine.swiftmodule/arm64-apple-ios.swiftmodule"

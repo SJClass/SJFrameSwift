@@ -12,7 +12,12 @@ struct ConstantString {
     static let k_EMPTY_SINGLE_SPACE:String = " ";
 }
 
-
+extension String{
+    var isArabic: Bool {
+        let predicate = NSPredicate(format: "SELF MATCHES %@", "(?s).*\\p{Arabic}.*")
+        return predicate.evaluate(with: self)
+    }
+}
 
 open class SJFrame{
     

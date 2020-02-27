@@ -1,14 +1,14 @@
-version: "Apple Swift version 5.1 (swiftlang-1100.0.270.13 clang-1100.0.33.7)"
-options: "7cc99737f8bc4886ed04d022d346238a"
-build_time: [1569315664, 839784000]
+version: "Apple Swift version 5.1.3 (swiftlang-1100.0.282.1 clang-1100.0.33.15)"
+options: "09ac9fd0f572bea815dfd8ee7b865d1d"
+build_time: [1582823801, 601159000]
 inputs:
-  "/Volumes/Data/Projects_git/iOS/SwiftFrame/SJFrameSwift/SJFrameSwift/Classes/SJAPILoader.swift": !dirty [1568369333, 737675779]
-  "/Volumes/Data/Projects_git/iOS/SwiftFrame/SJFrameSwift/SJFrameSwift/Classes/SlideInPresentationManager.swift": !dirty [1568369333, 740180366]
-  "/Volumes/Data/Projects_git/iOS/SwiftFrame/SJFrameSwift/SJFrameSwift/Classes/SJView.swift": !dirty [1568375168, 551331234]
-  "/Volumes/Data/Projects_git/iOS/SwiftFrame/SJFrameSwift/SJFrameSwift/Classes/SJTextField.swift": [1568369333, 738893323]
-  "/Volumes/Data/Projects_git/iOS/SwiftFrame/SJFrameSwift/SJFrameSwift/Classes/SlideInPresentationAnimator.swift": [1568369333, 739661796]
-  "/Volumes/Data/Projects_git/iOS/SwiftFrame/SJFrameSwift/SJFrameSwift/Classes/SJLanguageManager.swift": [1568369333, 738306342]
-  "/Volumes/Data/Projects_git/iOS/SwiftFrame/SJFrameSwift/SJFrameSwift/Classes/SJDataCatch.swift": [1568369333, 738016186]
-  "/Volumes/Data/Projects_git/iOS/SwiftFrame/SJFrameSwift/SJFrameSwift/Classes/SlideInPresentationController.swift": [1568369333, 739936673]
-  "/Volumes/Data/Projects_git/iOS/SwiftFrame/SJFrameSwift/SJFrameSwift/Classes/SJNavigationController.swift": [1568369333, 738565661]
-  "/Volumes/Data/Projects_git/iOS/SwiftFrame/SJFrameSwift/SJFrameSwift/Classes/Constants.swift": [1568369333, 737245959]
+  "/Users/arun/Desktop/Projects/iOS /Git/GIT-Swift-Frame/SJFrameSwift/SJFrameSwift/Classes/SJAPILoader.swift": !dirty [1582823792, 915279586]
+  "/Users/arun/Desktop/Projects/iOS /Git/GIT-Swift-Frame/SJFrameSwift/SJFrameSwift/Classes/SlideInPresentationManager.swift": [1582823792, 916311481]
+  "/Users/arun/Desktop/Projects/iOS /Git/GIT-Swift-Frame/SJFrameSwift/SJFrameSwift/Classes/SJView.swift": !dirty [1582823792, 915958122]
+  "/Users/arun/Desktop/Projects/iOS /Git/GIT-Swift-Frame/SJFrameSwift/SJFrameSwift/Classes/SJTextField.swift": [1582823792, 915761413]
+  "/Users/arun/Desktop/Projects/iOS /Git/GIT-Swift-Frame/SJFrameSwift/SJFrameSwift/Classes/SlideInPresentationAnimator.swift": [1582823792, 916088309]
+  "/Users/arun/Desktop/Projects/iOS /Git/GIT-Swift-Frame/SJFrameSwift/SJFrameSwift/Classes/SJLanguageManager.swift": [1582823792, 915530948]
+  "/Users/arun/Desktop/Projects/iOS /Git/GIT-Swift-Frame/SJFrameSwift/SJFrameSwift/Classes/SJDataCatch.swift": [1582823792, 915399875]
+  "/Users/arun/Desktop/Projects/iOS /Git/GIT-Swift-Frame/SJFrameSwift/SJFrameSwift/Classes/SlideInPresentationController.swift": [1582823792, 916200404]
+  "/Users/arun/Desktop/Projects/iOS /Git/GIT-Swift-Frame/SJFrameSwift/SJFrameSwift/Classes/SJNavigationController.swift": [1582823792, 915639713]
+  "/Users/arun/Desktop/Projects/iOS /Git/GIT-Swift-Frame/SJFrameSwift/SJFrameSwift/Classes/Constants.swift": [1582823792, 915151600]
