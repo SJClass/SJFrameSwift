@@ -265,10 +265,12 @@ extension UIImageView/*:URLSessionDelegate, URLSessionDownloadDelegate*/{
             return;
         }
         
-        let concurrentPhotoQueue =
-        DispatchQueue(
-          label: "com.raywenderlich.GooglyPuff.photoQueue",
-          attributes: .concurrent)
+//        let concurrentPhotoQueue =
+//        DispatchQueue(
+//          label: "com.raywenderlich.GooglyPuff.photoQueue",
+//          attributes: .concurrent)
+       let concurrentPhotoQueue = DispatchQueue(label: "com.sjframe.background.queue", qos: DispatchQoS.background, attributes: DispatchQueue.Attributes.concurrent, autoreleaseFrequency: DispatchQueue.AutoreleaseFrequency.inherit, target: nil)
+        
         
         concurrentPhotoQueue.async(flags: .barrier) { [weak self] in
           // 1
