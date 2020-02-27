@@ -260,73 +260,64 @@ extension UIImageView/*:URLSessionDelegate, URLSessionDownloadDelegate*/{
      }
      */
     
-    func downloadImage(url:String) -> Void {
-           
-           guard let URlImage = URL(string: url) else {
-               return;
-           }
-           
-         let concurrentPhotoQueue =
-           DispatchQueue(
-             label: "com.raywenderlich.GooglyPuff.photoQueue",
-             attributes: .concurrent)
-           
-           concurrentPhotoQueue.async(flags: .barrier) { [weak self] in
-             // 1
-             guard let self = self else {
-               return
-             }
-
-             print("Image checked URL:" + url)
-             if(SJDataCache.fileExists(url, in: SJDataCache.Directory.caches)){
-                 if let imageCacheData = SJDataCache.retrieve(url, from: SJDataCache.Directory.caches) as Data?{
-                     if let image:UIImage = UIImage(data: imageCacheData){
-                         DispatchQueue.main.async(execute: { () -> Void in
-                             self.image = image;
-                         })
-                     }
-                     return;
-                 }
-             }
-              
-             //let url:URL! = URL(string: "https://itunes.apple.com/search?term=flappy&entity=software")
-             var task: URLSessionDownloadTask!
-             var session: URLSession!
-             session = URLSession.shared
-             task = URLSessionDownloadTask()
-             task = session.downloadTask(with: URlImage, completionHandler: { (location: URL?, response: URLResponse?, error: Error?) -> Void in
-                 
-                 if location != nil{
-                     let data:Data! = try? Data(contentsOf: location!)
-                     SJDataCache.store(data, to: .caches, as: url)
-                     print("Image saved URL:" + url)
-                     let image = UIImage(data: data)
-                         DispatchQueue.main.async(execute: { () -> Void in
-                             self.image = image;
-                             
-                         })
-                 }else{
-                     DispatchQueue.main.async(execute: { () -> Void in
-                         self.image = nil;
-                         
-                     })
-                 }
-             })
-             task.resume()
-           }
-           
-           //let url = "http://www.intrawallpaper.com/static/images/hd-wallpapers-8_FY4tW4s.jpg";
-           
-           
-           
-           /*
-           let config = URLSessionConfiguration.default
-           let session = URLSession(configuration: config, delegate: self, delegateQueue: nil)
-           
-           // Don't specify a completion handler here or the delegate won't be called
-           session.downloadTask(with: URlImage).resume()
-    */
-       }
+    public func downloadImage(url:String,finish:@escaping (_ status:Bool,_ image:UIImage?)->()) -> Void{
+        guard let URlImage = URL(string: url) else {
+            return;
+        }
+        
+        let concurrentPhotoQueue =
+        DispatchQueue(
+          label: "com.raywenderlich.GooglyPuff.photoQueue",
+          attributes: .concurrent)
+        
+        concurrentPhotoQueue.async(flags: .barrier) { [weak self] in
+          // 1
+          guard let self = self else {
+            return
+          }
+            
+        //print("Image checked URL:" + url)
+        if(SJDataCache.fileExists(url, in: SJDataCache.Directory.caches)){
+            if let imageCacheData = SJDataCache.retrieve(url, from: SJDataCache.Directory.caches) as Data?{
+                if let image:UIImage = UIImage(data: imageCacheData){
+                    DispatchQueue.main.async(execute: { () -> Void in
+                        //self.image = image;
+                        finish(true,image)
+                    })
+                }
+                return;
+            }
+        }
+        
+        //let url:URL! = URL(string: "https://itunes.apple.com/search?term=flappy&entity=software")
+        var task: URLSessionDownloadTask!
+        var session: URLSession!
+        session = URLSession.shared
+        task = URLSessionDownloadTask()
+        task = session.downloadTask(with: URlImage, completionHandler: { (location: URL?, response: URLResponse?, error: Error?) -> Void in
+            
+            if location != nil{
+                let data:Data! = try? Data(contentsOf: location!)
+                //print("Image saved URL:" + url)
+                if let image = UIImage(data: data){
+                    SJDataCache.store(data, to: .caches, as: url)
+                    DispatchQueue.main.async(execute: { () -> Void in
+                        // self.image = image;
+                        finish(true,image)
+                    })
+                }
+            }else{
+                DispatchQueue.main.async(execute: { () -> Void in
+                    //self.image = nil;
+                    finish(false,nil)
+                })
+            }
+        })
+        task.resume()
+        }
+    }
+    
+    
     
     public func downloadImage(url:String) -> Void {
         
