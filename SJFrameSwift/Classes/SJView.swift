@@ -266,7 +266,7 @@ extension UIImageView/*:URLSessionDelegate, URLSessionDownloadDelegate*/{
                return;
            }
            
-           private let concurrentPhotoQueue =
+         let concurrentPhotoQueue =
            DispatchQueue(
              label: "com.raywenderlich.GooglyPuff.photoQueue",
              attributes: .concurrent)
