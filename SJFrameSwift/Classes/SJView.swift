@@ -240,25 +240,6 @@ extension UIImage {
 
 extension UIImageView/*:URLSessionDelegate, URLSessionDownloadDelegate*/{
     
-    /*
-     public func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didFinishDownloadingTo location: URL) {
-     if let data = try? Data(contentsOf: location), let image = UIImage(data: data) {
-     DispatchQueue.main.async {
-     self.image = image
-     }
-     } else {
-     fatalError("Cannot load the image")
-     }
-     }
-     
-     public func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didWriteData bytesWritten: Int64, totalBytesWritten: Int64, totalBytesExpectedToWrite: Int64) {
-     DispatchQueue.main.async {
-     let progress = Float(totalBytesWritten) / Float(totalBytesExpectedToWrite)
-     print("Progress - \(progress)");
-     //self.progressView.progress = Float(totalBytesWritten) / Float(totalBytesExpectedToWrite)
-     }
-     }
-     */
     
     public func downloadImage(url:String,finish:@escaping (_ status:Bool,_ image:UIImage?)->()) -> Void{
         guard let URlImage = URL(string: url) else {
@@ -290,6 +271,7 @@ extension UIImageView/*:URLSessionDelegate, URLSessionDownloadDelegate*/{
                 return;
             }
         }
+            
         
         //let url:URL! = URL(string: "https://itunes.apple.com/search?term=flappy&entity=software")
         var task: URLSessionDownloadTask!
@@ -303,6 +285,14 @@ extension UIImageView/*:URLSessionDelegate, URLSessionDownloadDelegate*/{
                 //print("Image saved URL:" + url)
                 if let image = UIImage(data: data){
                     SJDataCache.store(data, to: .caches, as: url)
+                    
+                    var thumpimage:UIImage = image
+                    if thumpimage.size.width>300, let thmup = thumpimage.resized(toWidth: 300){
+                        thumpimage = thmup
+                    }
+                    
+                    SJDataCache.store(data, to: .caches, as: url+".thump")
+                    
                     DispatchQueue.main.async(execute: { () -> Void in
                         // self.image = image;
                         finish(true,image)
@@ -325,59 +315,34 @@ extension UIImageView/*:URLSessionDelegate, URLSessionDownloadDelegate*/{
         
         downloadImage(url: url) { (status, image) in
             if status{
-                self.image = image;
+               DispatchQueue.main.async(execute: { () -> Void in
+                    self.image = image;
+                })
             }
         }
         
-        //let url = "http://www.intrawallpaper.com/static/images/hd-wallpapers-8_FY4tW4s.jpg";
-        /*
-        guard let URlImage = URL(string: url) else {
-            return;
-        }
-        print("Image checked URL:" + url)
-        if(SJDataCache.fileExists(url, in: SJDataCache.Directory.caches)){
-            if let imageCacheData = SJDataCache.retrieve(url, from: SJDataCache.Directory.caches) as Data?{
+    }
+    
+    public func downloadThumpImage(url:String) -> Void {
+        if(SJDataCache.fileExists(url+".thump", in: SJDataCache.Directory.caches)){
+            if let imageCacheData = SJDataCache.retrieve(url+".thump", from: SJDataCache.Directory.caches) as Data?{
                 if let image:UIImage = UIImage(data: imageCacheData){
-                    DispatchQueue.main.async(execute: { () -> Void in
+//                    DispatchQueue.main.async(execute: { () -> Void in
+                       // print("********************THUMP******************")
                         self.image = image;
-                    })
+//                    })
                 }
                 return;
             }
         }
-        
-        //let url:URL! = URL(string: "https://itunes.apple.com/search?term=flappy&entity=software")
-        var task: URLSessionDownloadTask!
-        var session: URLSession!
-        session = URLSession.shared
-        task = URLSessionDownloadTask()
-        task = session.downloadTask(with: URlImage, completionHandler: { (location: URL?, response: URLResponse?, error: Error?) -> Void in
-            
-            if location != nil{
-                let data:Data! = try? Data(contentsOf: location!)
-                SJDataCache.store(data, to: .caches, as: url)
-                print("Image saved URL:" + url)
-                let image = UIImage(data: data)
+        downloadImage(url: url) { (status, image) in
+            if status{
                 DispatchQueue.main.async(execute: { () -> Void in
                     self.image = image;
-                    
-                })
-            }else{
-                DispatchQueue.main.async(execute: { () -> Void in
-                    self.image = nil;
-                    
                 })
             }
-        })
-        task.resume()
-        */
-        /*
-         let config = URLSessionConfiguration.default
-         let session = URLSession(configuration: config, delegate: self, delegateQueue: nil)
-         
-         // Don't specify a completion handler here or the delegate won't be called
-         session.downloadTask(with: URlImage).resume()
-         */
+        }
+        
     }
 }
 
