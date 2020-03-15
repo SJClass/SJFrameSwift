@@ -19,11 +19,11 @@ extension String{
         return predicate.evaluate(with: self)
     }
     
-    func isValidEmail(emailStr:String) -> Bool {
+    var isValidEmail:Bool {
         let emailRegEx = ConstantString.k_VALID_EMAIL
         
         let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
-        return emailPred.evaluate(with: emailStr)
+        return emailPred.evaluate(with: self)
     }
 }
 
