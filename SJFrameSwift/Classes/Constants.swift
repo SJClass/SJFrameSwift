@@ -14,12 +14,12 @@ struct ConstantString {
 }
 
 extension String{
-    var isArabic: Bool {
+    public var isArabic: Bool {
         let predicate = NSPredicate(format: "SELF MATCHES %@", "(?s).*\\p{Arabic}.*")
         return predicate.evaluate(with: self)
     }
     
-    var isValidEmail:Bool {
+    public var isValidEmail:Bool {
         let emailRegEx = ConstantString.k_VALID_EMAIL
         
         let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
