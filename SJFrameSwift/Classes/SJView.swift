@@ -255,7 +255,7 @@ extension UIImageView/*:URLSessionDelegate, URLSessionDownloadDelegate*/{
         
         concurrentPhotoQueue.async(flags: .barrier) { [weak self] in
           // 1
-          guard let self = self else {
+          guard self != nil else {
             return
           }
             
