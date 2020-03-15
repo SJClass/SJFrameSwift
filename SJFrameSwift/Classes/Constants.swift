@@ -10,6 +10,7 @@ import Foundation
 struct ConstantString {
     static let k_EMPTY:String = "";
     static let k_EMPTY_SINGLE_SPACE:String = " ";
+    static let k_VALID_EMAIL:String         = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
 }
 
 extension String{
