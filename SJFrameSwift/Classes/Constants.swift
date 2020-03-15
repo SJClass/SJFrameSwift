@@ -17,6 +17,13 @@ extension String{
         let predicate = NSPredicate(format: "SELF MATCHES %@", "(?s).*\\p{Arabic}.*")
         return predicate.evaluate(with: self)
     }
+    
+    func isValidEmail(emailStr:String) -> Bool {
+        let emailRegEx = ConstantString.k_VALID_EMAIL
+        
+        let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+        return emailPred.evaluate(with: emailStr)
+    }
 }
 
 open class SJFrame{
