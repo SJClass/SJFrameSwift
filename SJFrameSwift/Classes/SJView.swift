@@ -242,72 +242,79 @@ extension UIImageView/*:URLSessionDelegate, URLSessionDownloadDelegate*/{
     
     
     public func downloadImage(url:String,finish:@escaping (_ status:Bool,_ image:UIImage?)->()) -> Void{
-        guard let URlImage = URL(string: url) else {
-            return;
-        }
-        
-//        let concurrentPhotoQueue =
-//        DispatchQueue(
-//          label: "com.raywenderlich.GooglyPuff.photoQueue",
-//          attributes: .concurrent)
-       let concurrentPhotoQueue = DispatchQueue(label: "com.sjframe.background.queue", qos: DispatchQoS.background, attributes: DispatchQueue.Attributes.concurrent, autoreleaseFrequency: DispatchQueue.AutoreleaseFrequency.inherit, target: nil)
-        
-        
-        concurrentPhotoQueue.async(flags: .barrier) { [weak self] in
-          // 1
-          guard self != nil else {
-            return
-          }
-            
-        //print("Image checked URL:" + url)
-        if(SJDataCache.fileExists(url, in: SJDataCache.Directory.caches)){
-            if let imageCacheData = SJDataCache.retrieve(url, from: SJDataCache.Directory.caches) as Data?{
-                if let image:UIImage = UIImage(data: imageCacheData){
-                    DispatchQueue.main.async(execute: { () -> Void in
-                        //self.image = image;
-                        finish(true,image)
-                    })
-                }
+            guard let URlImage = URL(string: url) else {
                 return;
             }
-        }
             
-        
-        //let url:URL! = URL(string: "https://itunes.apple.com/search?term=flappy&entity=software")
-        var task: URLSessionDownloadTask!
-        var session: URLSession!
-        session = URLSession.shared
-        task = URLSessionDownloadTask()
-        task = session.downloadTask(with: URlImage, completionHandler: { (location: URL?, response: URLResponse?, error: Error?) -> Void in
+    //        let concurrentPhotoQueue =
+    //        DispatchQueue(
+    //          label: "com.raywenderlich.GooglyPuff.photoQueue",
+    //          attributes: .concurrent)
+           let concurrentPhotoQueue = DispatchQueue(label: "com.sjframe.background.queue", qos: DispatchQoS.background, attributes: DispatchQueue.Attributes.concurrent, autoreleaseFrequency: DispatchQueue.AutoreleaseFrequency.inherit, target: nil)
             
-            if location != nil{
-                let data:Data! = try? Data(contentsOf: location!)
-                //print("Image saved URL:" + url)
-                if let image = UIImage(data: data){
-                    SJDataCache.store(data, to: .caches, as: url)
-                    
-                    var thumpimage:UIImage = image
-                    if thumpimage.size.width>300, let thmup = thumpimage.resized(toWidth: 300){
-                        thumpimage = thmup
+            
+            concurrentPhotoQueue.async(flags: .barrier) { [weak self] in
+              // 1
+                guard self != nil else {
+                return
+              }
+                
+            //print("Image checked URL:" + url)
+            if(SJDataCache.fileExists(url, in: SJDataCache.Directory.caches)){
+                if let imageCacheData = SJDataCache.retrieve(url, from: SJDataCache.Directory.caches) as Data?{
+                    if let image:UIImage = UIImage(data: imageCacheData){
+                        DispatchQueue.main.async(execute: { () -> Void in
+                            //self.image = image;
+                            finish(true,image)
+                        })
                     }
-                    
-                    SJDataCache.store(data, to: .caches, as: url+".thump")
-                    
+                    return;
+                }
+            }
+                
+            
+            //let url:URL! = URL(string: "https://itunes.apple.com/search?term=flappy&entity=software")
+            var task: URLSessionDownloadTask!
+            var session: URLSession!
+            session = URLSession.shared
+            task = URLSessionDownloadTask()
+            task = session.downloadTask(with: URlImage, completionHandler: { (location: URL?, response: URLResponse?, error: Error?) -> Void in
+                
+                if location != nil{
+                    let data:Data! = try? Data(contentsOf: location!)
+                    //print("Image saved URL:" + url)
+                    if let image = UIImage(data: data){
+                        SJDataCache.store(data, to: .caches, as: url)
+                        
+                        var thumpimage:Data = data
+                        let width = UIScreen.main.bounds.width
+                        
+                        if image.size.width>width, let thmup = image.resized(toWidth: width){
+                            if let tmpData = thmup.pngData(){
+                                thumpimage = tmpData
+                            }else if let tmpData = thmup.jpegData(compressionQuality: 1){
+                                thumpimage = tmpData
+                            }
+                            
+                        }
+                        
+                        SJDataCache.store(thumpimage, to: .caches, as: url+".thump")
+                        
+                        DispatchQueue.main.async(execute: { () -> Void in
+                            // self.image = image;
+                            finish(true,image)
+                        })
+                    }
+                }else{
                     DispatchQueue.main.async(execute: { () -> Void in
-                        // self.image = image;
-                        finish(true,image)
+                        //self.image = nil;
+                        finish(false,nil)
                     })
                 }
-            }else{
-                DispatchQueue.main.async(execute: { () -> Void in
-                    //self.image = nil;
-                    finish(false,nil)
-                })
+            })
+            task.resume()
             }
-        })
-        task.resume()
         }
-    }
     
     
     
