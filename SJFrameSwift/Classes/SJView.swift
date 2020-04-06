@@ -238,6 +238,25 @@ extension UIImage {
     }
 }
 
+open class SJImageViewLocal: UIView {
+    
+    
+    override open func draw(_ rect: CGRect) {
+        // Drawing code
+        
+        if let objLocalLanguage:SJLocale = SJLocalisedString.getSelectedLocale(){
+            if(objLocalLanguage.languageCode?.lowercased() == "ar"){
+                semanticContentAttribute = UISemanticContentAttribute.forceRightToLeft;
+            }else{
+                semanticContentAttribute = UISemanticContentAttribute.forceLeftToRight;
+            }
+        }else {
+            semanticContentAttribute = UISemanticContentAttribute.forceLeftToRight;
+        }
+    }
+    
+}
+
 extension UIImageView/*:URLSessionDelegate, URLSessionDownloadDelegate*/{
     
     
@@ -303,6 +322,11 @@ extension UIImageView/*:URLSessionDelegate, URLSessionDownloadDelegate*/{
                         DispatchQueue.main.async(execute: { () -> Void in
                             // self.image = image;
                             finish(true,image)
+                        })
+                    }else{
+                        DispatchQueue.main.async(execute: { () -> Void in
+                            //self.image = nil;
+                            finish(false,nil)
                         })
                     }
                 }else{
