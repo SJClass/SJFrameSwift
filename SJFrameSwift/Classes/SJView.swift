@@ -243,7 +243,11 @@ open class SJImageViewLocal: UIImageView {
     
     override open func draw(_ rect: CGRect) {
         // Drawing code
+        setLocalization()
         
+    }
+    
+    public func setLocalization() {
         if let objLocalLanguage:SJLocale = SJLocalisedString.getSelectedLocale(){
             if(objLocalLanguage.languageCode?.lowercased() == "ar"){
                 semanticContentAttribute = UISemanticContentAttribute.forceRightToLeft;
