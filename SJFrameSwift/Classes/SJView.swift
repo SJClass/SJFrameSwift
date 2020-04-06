@@ -259,6 +259,8 @@ open class SJImageViewLocal: UIImageView {
         }
     }
     
+    
+    
 }
 
 extension UIImageView/*:URLSessionDelegate, URLSessionDownloadDelegate*/{
