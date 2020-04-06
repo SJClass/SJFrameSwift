@@ -118,18 +118,22 @@ open class CheckInternet{
 extension SJViewController {
     func setAwakeFromNib() {
         if SJFrame.settings.isHaveRTL{
-            guard let lang = SJLocalisedString.getSelectedLocale(),let code =  lang.languageCode else {
-                return;
-            }
+            forceUpdateRTL()
+        }
+    }
+    
+    public func forceUpdateRTL() {
+        guard let lang = SJLocalisedString.getSelectedLocale(),let code =  lang.languageCode else {
+            return;
+        }
+        
+        if code.lowercased() == "ar"{
+            navigationController?.view.semanticContentAttribute = .forceRightToLeft
+            navigationController?.navigationBar.semanticContentAttribute = .forceRightToLeft
             
-            if code.lowercased() == "ar"{
-                navigationController?.view.semanticContentAttribute = .forceRightToLeft
-                navigationController?.navigationBar.semanticContentAttribute = .forceRightToLeft
-                
-            }else{
-                navigationController?.view.semanticContentAttribute = .forceLeftToRight
-                navigationController?.navigationBar.semanticContentAttribute = .forceLeftToRight
-            }
+        }else{
+            navigationController?.view.semanticContentAttribute = .forceLeftToRight
+            navigationController?.navigationBar.semanticContentAttribute = .forceLeftToRight
         }
     }
 }
