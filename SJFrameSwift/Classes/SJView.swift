@@ -238,7 +238,7 @@ extension UIImage {
     }
 }
 
-open class SJImageViewLocal: UIView {
+open class SJImageViewLocal: UIImageView {
     
     
     override open func draw(_ rect: CGRect) {
