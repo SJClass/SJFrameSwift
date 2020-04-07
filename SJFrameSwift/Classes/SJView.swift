@@ -240,12 +240,18 @@ extension UIImage {
 
 open class SJImageViewLocal: UIImageView {
     
+    @IBInspectable public var localization:Bool = false {
+        didSet{
+            setLocalization()
+        }
+    }
     
+    /*
     override open func draw(_ rect: CGRect) {
         // Drawing code
         setLocalization()
         
-    }
+    }*/
     
     public func setLocalization() {
         if let objLocalLanguage:SJLocale = SJLocalisedString.getSelectedLocale(){
