@@ -367,18 +367,20 @@ extension UIImageView/*:URLSessionDelegate, URLSessionDownloadDelegate*/{
     }
     
     public func downloadThumpImage(url:String) -> Void {
+        /*
         if(SJDataCache.fileExists(url+".thump", in: SJDataCache.Directory.caches)){
             if let imageCacheData = SJDataCache.retrieve(url+".thump", from: SJDataCache.Directory.caches) as Data?{
                 if let image:UIImage = UIImage(data: imageCacheData){
-//                    DispatchQueue.main.async(execute: { () -> Void in
+                    DispatchQueue.main.async(execute: { () -> Void in
                        // print("********************THUMP******************")
                         self.image = image;
-//                    })
+                    })
                 }
                 return;
             }
         }
-        downloadImage(url: url) { (status, image) in
+        */
+        downloadThumpImage(url: url) { (status, image) in
             if status{
                 DispatchQueue.main.async(execute: { () -> Void in
                     self.image = image;
@@ -386,6 +388,30 @@ extension UIImageView/*:URLSessionDelegate, URLSessionDownloadDelegate*/{
             }
         }
         
+    }
+    
+    public func downloadThumpImage(url:String,finish:@escaping (_ status:Bool,_ image:UIImage?)->()) -> Void{
+       
+        if(SJDataCache.fileExists(url+".thump", in: SJDataCache.Directory.caches)){
+            if let imageCacheData = SJDataCache.retrieve(url+".thump", from: SJDataCache.Directory.caches) as Data?{
+                if let image:UIImage = UIImage(data: imageCacheData){
+                    DispatchQueue.main.async(execute: { () -> Void in
+                       // print("********************THUMP******************")
+                        //self.image = image;
+                         finish(true,image)
+                    })
+                }
+                return;
+            }
+        }
+        downloadImage(url: url) { (status, image) in
+            if status{
+                DispatchQueue.main.async(execute: { () -> Void in
+                   // self.image = image;
+                     finish(true,image)
+                })
+            }
+        }
     }
 }
 
