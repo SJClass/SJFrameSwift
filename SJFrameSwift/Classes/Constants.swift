@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 struct ConstantString {
     static let k_EMPTY:String = "";
